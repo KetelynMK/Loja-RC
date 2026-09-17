@@ -1,214 +1,706 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RC Produtos de Limpeza - encomende produtos de limpeza com praticidade.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="RC Produtos de Limpeza - encomende produtos de limpeza com praticidade."
+  >
+
   <title>RC Produtos de Limpeza | Sua casa mais limpa</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- =========================
+       CABEÇALHO
+  ========================== -->
+
   <header class="topbar">
+
     <div class="container nav">
+
+      <!-- LOGO -->
       <a class="brand" href="#inicio">
-        <span class="brand-mark">RC</span>
-        <span><strong>RC</strong><small>Produtos de Limpeza</small></span>
+
+        <span class="brand-mark">
+          RC
+        </span>
+
+        <span class="brand-text">
+          <strong>RC</strong>
+          <small>Produtos de Limpeza</small>
+        </span>
+
       </a>
-      <nav>
-        <a href="#produtos">Produtos</a>
-        <a href="#como-funciona">Como comprar</a>
-        <a href="#contato">Contato</a>
+
+
+      <!-- MENU -->
+      <nav class="main-nav">
+
+        <a href="#produtos">
+          Produtos
+        </a>
+
+        <a href="#como-funciona">
+          Como comprar
+        </a>
+
+        <a href="#contato">
+          Contato
+        </a>
+
       </nav>
-      <button class="cart-button" id="openCart" aria-label="Abrir carrinho">
-        🛒 <span>Pedido</span> <b id="cartCount">0</b>
+
+
+      <!-- CARRINHO -->
+      <button
+        class="cart-button"
+        id="openCart"
+        type="button"
+        aria-label="Abrir carrinho"
+      >
+
+        <span class="cart-icon">
+          🛒
+        </span>
+
+        <span>
+          Pedido
+        </span>
+
+        <b id="cartCount">
+          0
+        </b>
+
       </button>
-      <section class="produtos-section">
-  <div class="produtos-container">
 
-    <div class="produtos-header">
-      <div>
-        <span class="produtos-label">NOSSOS PRODUTOS</span>
-        <h2>Escolha seus produtos</h2>
-        <p>Encontre tudo o que você precisa e adicione ao seu pedido.</p>
-      </div>
-
-      <div class="produtos-contador">
-        <span>0</span> produtos
-      </div>
     </div>
 
-    <div class="produtos-grid">
-
-      <!-- PRODUTO 1 -->
-      <article class="produto-card">
-        <div class="produto-imagem">
-          <img
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
-            alt="Produto"
-          >
-          <span class="produto-tag">Destaque</span>
-        </div>
-
-        <div class="produto-info">
-          <span class="produto-categoria">Categoria</span>
-          <h3>Produto Premium</h3>
-          <p>Descrição curta do produto para apresentar seus principais benefícios.</p>
-
-          <div class="produto-bottom">
-            <strong>R$ 49,90</strong>
-            <button type="button">Adicionar</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUTO 2 -->
-      <article class="produto-card">
-        <div class="produto-imagem">
-          <img
-            src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=800&q=80"
-            alt="Produto"
-          >
-        </div>
-
-        <div class="produto-info">
-          <span class="produto-categoria">Categoria</span>
-          <h3>Produto Especial</h3>
-          <p>Uma descrição simples para mostrar ao cliente o que ele está comprando.</p>
-
-          <div class="produto-bottom">
-            <strong>R$ 59,90</strong>
-            <button type="button">Adicionar</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUTO 3 -->
-      <article class="produto-card">
-        <div class="produto-imagem">
-          <img
-            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
-            alt="Produto"
-          >
-          <span class="produto-tag">Novo</span>
-        </div>
-
-        <div class="produto-info">
-          <span class="produto-categoria">Categoria</span>
-          <h3>Produto Exclusivo</h3>
-          <p>Produto selecionado especialmente para seus clientes.</p>
-
-          <div class="produto-bottom">
-            <strong
-    </div>
   </header>
 
+
+  <!-- =========================
+       CONTEÚDO PRINCIPAL
+  ========================== -->
+
   <main id="inicio">
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <section class="hero">
+
       <div class="hero-overlay"></div>
+
       <div class="container hero-content">
+
         <div class="hero-copy">
-          <span class="eyebrow">QUALIDADE • ECONOMIA • PERFUME QUE DURA</span>
-          <h1>Produtos de limpeza<br><span>do jeito que você precisa.</span></h1>
-          <p>Monte seu pedido online, confira os valores e envie tudo pelo WhatsApp.</p>
+
+          <span class="eyebrow">
+            QUALIDADE • ECONOMIA • PERFUME QUE DURA
+          </span>
+
+          <h1>
+            Produtos de limpeza
+            <br>
+            <span>do jeito que você precisa.</span>
+          </h1>
+
+          <p>
+            Monte seu pedido online, confira os valores
+            e envie tudo pelo WhatsApp.
+          </p>
+
+
           <div class="hero-actions">
-            <a class="btn primary" href="#produtos">Ver produtos</a>
-            <a class="btn light" href="#contato">Falar conosco</a>
+
+            <a
+              class="btn primary"
+              href="#produtos"
+            >
+              Ver produtos
+            </a>
+
+            <a
+              class="btn light"
+              href="#contato"
+            >
+              Falar conosco
+            </a>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         BENEFÍCIOS
+    ========================== -->
 
     <section class="benefits">
+
       <div class="container benefit-grid">
-        <div><span>✨</span><div><strong>Qualidade</strong><small>Produtos selecionados</small></div></div>
-        <div><span>💰</span><div><strong>Economia</strong><small>Preços acessíveis</small></div></div>
-        <div><span>🚚</span><div><strong>Entrega na região</strong><small>Consulte disponibilidade</small></div></div>
-        <div><span>📱</span><div><strong>Pedido fácil</strong><small>Direto pelo WhatsApp</small></div></div>
-      </div>
-    </section>
 
-    <section class="products-section" id="produtos">
-      <div class="container">
-        <div class="section-heading">
+
+        <div class="benefit-item">
+
+          <span>
+            ✨
+          </span>
+
           <div>
-            <span class="section-kicker">NOSSA LOJA</span>
-            <h2>Escolha seus produtos</h2>
-            <p>Adicione ao pedido e confira o total antes de enviar.</p>
+
+            <strong>
+              Qualidade
+            </strong>
+
+            <small>
+              Produtos selecionados
+            </small>
+
           </div>
-          <div class="search-wrap">
-            <span>⌕</span>
-            <input id="search" type="search" placeholder="Buscar produto..." aria-label="Buscar produto">
-          </div>
+
         </div>
 
-        <div class="categories" id="categories"></div>
-        <div class="product-grid" id="productGrid"></div>
-        <div class="empty-state" id="emptyState" hidden>Nenhum produto encontrado.</div>
+
+        <div class="benefit-item">
+
+          <span>
+            💰
+          </span>
+
+          <div>
+
+            <strong>
+              Economia
+            </strong>
+
+            <small>
+              Preços acessíveis
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div class="benefit-item">
+
+          <span>
+            🚚
+          </span>
+
+          <div>
+
+            <strong>
+              Entrega na região
+            </strong>
+
+            <small>
+              Consulte disponibilidade
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div class="benefit-item">
+
+          <span>
+            📱
+          </span>
+
+          <div>
+
+            <strong>
+              Pedido fácil
+            </strong>
+
+            <small>
+              Direto pelo WhatsApp
+            </small>
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </section>
 
-    <section class="how" id="como-funciona">
+
+
+    <!-- =========================
+         PRODUTOS
+    ========================== -->
+
+    <section
+      class="products-section"
+      id="produtos"
+    >
+
       <div class="container">
-        <div class="section-heading centered">
-          <span class="section-kicker">SIMPLES E RÁPIDO</span>
-          <h2>Como fazer seu pedido</h2>
+
+
+        <!-- TÍTULO DA SEÇÃO -->
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="section-kicker">
+              NOSSA LOJA
+            </span>
+
+            <h2>
+              Escolha seus produtos
+            </h2>
+
+            <p>
+              Adicione ao pedido e confira o total antes de enviar.
+            </p>
+
+          </div>
+
+
+          <!-- BUSCA -->
+
+          <div class="search-wrap">
+
+            <span>
+              ⌕
+            </span>
+
+            <input
+              id="search"
+              type="search"
+              placeholder="Buscar produto..."
+              aria-label="Buscar produto"
+            >
+
+          </div>
+
         </div>
-        <div class="steps">
-          <div class="step"><b>01</b><h3>Escolha</h3><p>Veja os produtos e coloque no carrinho.</p></div>
-          <div class="step"><b>02</b><h3>Confira</h3><p>Revise quantidades e veja o valor total.</p></div>
-          <div class="step"><b>03</b><h3>Envie</h3><p>Informe seus dados e envie o pedido pelo WhatsApp.</p></div>
+
+
+        <!-- CATEGORIAS -->
+
+        <div
+          class="categories"
+          id="categories"
+        ></div>
+
+
+        <!--
+          IMPORTANTE:
+
+          NÃO coloque produtos manualmente aqui.
+
+          O seu script.js deve preencher
+          automaticamente esta área.
+        -->
+
+        <div
+          class="product-grid"
+          id="productGrid"
+        ></div>
+
+
+        <!-- NENHUM PRODUTO -->
+
+        <div
+          class="empty-state"
+          id="emptyState"
+          hidden
+        >
+          Nenhum produto encontrado.
         </div>
+
+
       </div>
+
     </section>
 
-    <section class="store" id="contato">
-      <div class="container store-card">
-        <div>
-          <span class="section-kicker">VENHA CONHECER</span>
-          <h2>Loja física RC</h2>
-          <p>Rua Terra Chácara Solar 2<br>Santana de Parnaíba - SP</p>
+
+
+    <!-- =========================
+         COMO FUNCIONA
+    ========================== -->
+
+    <section
+      class="how"
+      id="como-funciona"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading centered">
+
+          <span class="section-kicker">
+            SIMPLES E RÁPIDO
+          </span>
+
+          <h2>
+            Como fazer seu pedido
+          </h2>
+
         </div>
-        <div class="store-contact">
-          <strong>Pedidos e informações</strong>
-          <a href="https://wa.me/5511983184154" target="_blank" rel="noopener">WhatsApp: (11) 98318-4154</a>
-          <a href="https://wa.me/5511954498581" target="_blank" rel="noopener">(11) 95449-8581</a>
-          <a href="https://instagram.com/grupo.assis.oficial" target="_blank" rel="noopener">@grupo.assis.oficial</a>
+
+
+        <div class="steps">
+
+
+          <!-- PASSO 1 -->
+
+          <div class="step">
+
+            <b>
+              01
+            </b>
+
+            <h3>
+              Escolha
+            </h3>
+
+            <p>
+              Veja os produtos e coloque no carrinho.
+            </p>
+
+          </div>
+
+
+          <!-- PASSO 2 -->
+
+          <div class="step">
+
+            <b>
+              02
+            </b>
+
+            <h3>
+              Confira
+            </h3>
+
+            <p>
+              Revise quantidades e veja o valor total.
+            </p>
+
+          </div>
+
+
+          <!-- PASSO 3 -->
+
+          <div class="step">
+
+            <b>
+              03
+            </b>
+
+            <h3>
+              Envie
+            </h3>
+
+            <p>
+              Informe seus dados e envie o pedido pelo WhatsApp.
+            </p>
+
+          </div>
+
+
         </div>
+
       </div>
+
     </section>
+
+
+
+    <!-- =========================
+         CONTATO / LOJA
+    ========================== -->
+
+    <section
+      class="store"
+      id="contato"
+    >
+
+      <div class="container store-card">
+
+
+        <div>
+
+          <span class="section-kicker">
+            VENHA CONHECER
+          </span>
+
+          <h2>
+            Loja física RC
+          </h2>
+
+          <p>
+            Rua Terra Chácara Solar 2
+            <br>
+            Santana de Parnaíba - SP
+          </p>
+
+        </div>
+
+
+        <div class="store-contact">
+
+          <strong>
+            Pedidos e informações
+          </strong>
+
+
+          <a
+            href="https://wa.me/5511983184154"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp: (11) 98318-4154
+          </a>
+
+
+          <a
+            href="https://wa.me/5511954498581"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            (11) 95449-8581
+          </a>
+
+
+          <a
+            href="https://instagram.com/grupo.assis.oficial"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @grupo.assis.oficial
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
   </main>
 
+
+
+  <!-- =========================
+       RODAPÉ
+  ========================== -->
+
   <footer>
+
     <div class="container footer-inner">
-      <span>© 2026 RC Produtos de Limpeza</span>
-      <span>Sua casa mais limpa, organizada e perfumada.</span>
+
+      <span>
+        © 2026 RC Produtos de Limpeza
+      </span>
+
+      <span>
+        Sua casa mais limpa, organizada e perfumada.
+      </span>
+
     </div>
+
   </footer>
 
-  <div class="cart-overlay" id="cartOverlay"></div>
-  <aside class="cart" id="cart" aria-label="Carrinho">
+
+
+  <!-- =========================
+       FUNDO DO CARRINHO
+  ========================== -->
+
+  <div
+    class="cart-overlay"
+    id="cartOverlay"
+  ></div>
+
+
+
+  <!-- =========================
+       CARRINHO
+  ========================== -->
+
+  <aside
+    class="cart"
+    id="cart"
+    aria-label="Carrinho"
+  >
+
+
+    <!-- CABEÇALHO DO CARRINHO -->
+
     <div class="cart-header">
-      <div><span class="section-kicker">SEU PEDIDO</span><h2>Carrinho</h2></div>
-      <button id="closeCart" class="icon-button">×</button>
-    </div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="cart-empty" id="cartEmpty">Seu carrinho está vazio.<br>Escolha alguns produtos para começar.</div>
-    <div class="cart-footer">
-      <div class="total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
-      <div class="checkout-fields">
-        <input id="customerName" type="text" placeholder="Seu nome">
-        <input id="customerAddress" type="text" placeholder="Endereço para entrega (opcional)">
+
+      <div>
+
+        <span class="section-kicker">
+          SEU PEDIDO
+        </span>
+
+        <h2>
+          Carrinho
+        </h2>
+
       </div>
-      <button class="btn primary full" id="whatsappOrder">Enviar pedido pelo WhatsApp</button>
-      <small>O pedido será enviado para confirmação. O pagamento não é realizado no site.</small>
+
+
+      <button
+        id="closeCart"
+        class="icon-button"
+        type="button"
+        aria-label="Fechar carrinho"
+      >
+        ×
+      </button>
+
     </div>
+
+
+
+    <!-- PRODUTOS DO CARRINHO -->
+
+    <div
+      class="cart-items"
+      id="cartItems"
+    ></div>
+
+
+    <!-- CARRINHO VAZIO -->
+
+    <div
+      class="cart-empty"
+      id="cartEmpty"
+    >
+
+      Seu carrinho está vazio.
+
+      <br>
+
+      Escolha alguns produtos para começar.
+
+    </div>
+
+
+
+    <!-- RODAPÉ DO CARRINHO -->
+
+    <div class="cart-footer">
+
+
+      <!-- TOTAL -->
+
+      <div class="total">
+
+        <span>
+          Total
+        </span>
+
+        <strong id="cartTotal">
+          R$ 0,00
+        </strong>
+
+      </div>
+
+
+      <!-- NOME -->
+
+      <div class="checkout-fields">
+
+        <input
+          id="customerName"
+          type="text"
+          placeholder="Seu nome"
+          autocomplete="name"
+        >
+
+
+        <input
+          id="customerAddress"
+          type="text"
+          placeholder="Endereço para entrega (opcional)"
+          autocomplete="street-address"
+        >
+
+      </div>
+
+
+      <!-- WHATSAPP -->
+
+      <button
+        class="btn primary full"
+        id="whatsappOrder"
+        type="button"
+      >
+        Enviar pedido pelo WhatsApp
+      </button>
+
+
+      <small>
+        O pedido será enviado para confirmação.
+        O pagamento não é realizado no site.
+      </small>
+
+    </div>
+
   </aside>
 
-  <div class="toast" id="toast"></div>
-  <script src="script.js"></script>
-</body>
-</html>
 
+
+  <!-- =========================
+       NOTIFICAÇÃO
+  ========================== -->
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
