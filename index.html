@@ -102,37 +102,6 @@
         </b>
 
       </button>
-
-    </div>
-    {carrinhoAberto && (
-  <div className="cart-overlay" onClick={() => setCarrinhoAberto(false)}>
-    <aside
-      className="cart"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button onClick={() => setCarrinhoAberto(false)}>
-        ×
-      </button>
-
-      <h2>Seu pedido</h2>
-
-      {carrinho.length === 0 ? (
-        <p>Seu carrinho está vazio.</p>
-      ) : (
-        carrinho.map((produto) => (
-          <div key={produto.id}>
-            <strong>{produto.nome}</strong>
-            <span>
-              {produto.quantidade} × R$ {produto.preco.toFixed(2)}
-            </span>
-          </div>
-        ))
-      )}
-
-      <strong>
-        Total: R$ {total.toFixed(2)}
-      </strong>
-    </aside>
   </div>
 )}
 
