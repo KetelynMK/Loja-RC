@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
@@ -10,7 +11,7 @@
 
     <meta
         name="description"
-        content="RC Produtos de Limpeza - produtos para limpeza, lavanderia, organização e perfumação."
+        content="RC Produtos de Limpeza - produtos para limpeza, lavanderia, acessórios e perfumação."
     >
 
     <title>RC Produtos de Limpeza</title>
@@ -21,7 +22,7 @@
 <body>
 
     <!-- =========================
-         CABEÇALHO
+         HEADER
     ========================== -->
 
     <header class="header">
@@ -29,12 +30,14 @@
         <div class="container header-container">
 
             <a href="#inicio" class="logo">
-                <span>RC</span>
-                <div>
+                <span class="logo-box">RC</span>
+
+                <span class="logo-text">
                     <strong>RC Produtos</strong>
                     <small>de Limpeza</small>
-                </div>
+                </span>
             </a>
+
 
             <nav class="menu" id="menu">
 
@@ -44,27 +47,38 @@
 
                 <a href="#produtos">Produtos</a>
 
-                <a href="#como-comprar">Como comprar</a>
+                <a href="#como-comprar">
+                    Como comprar
+                </a>
 
                 <a href="#contato">Contato</a>
 
             </nav>
 
+
             <button
                 type="button"
-                class="botao-carrinho-header"
-                id="botaoCarrinho"
+                class="botao-carrinho"
+                id="abrirCarrinho"
             >
+
                 🛒
-                <span>Pedido</span>
-                <strong id="contadorCarrinho">0</strong>
+
+                <span>
+                    Carrinho
+                </span>
+
+                <strong id="contadorCarrinho">
+                    0
+                </strong>
+
             </button>
+
 
             <button
                 type="button"
                 class="menu-mobile"
                 id="menuMobile"
-                aria-label="Abrir menu"
             >
                 ☰
             </button>
@@ -74,13 +88,16 @@
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
-
     <main>
 
-        <section class="hero" id="inicio">
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
 
             <div class="container hero-container">
 
@@ -96,22 +113,22 @@
                     </h1>
 
                     <p>
-                        Encontre produtos para limpeza, organização
-                        e perfumação da sua casa.
+                        Encontre produtos para limpeza,
+                        organização e perfumação da sua casa.
                     </p>
 
-                    <div class="hero-botoes">
+                    <div class="hero-buttons">
 
                         <a
                             href="#produtos"
-                            class="botao botao-principal"
+                            class="btn btn-primary"
                         >
                             Ver produtos
                         </a>
 
                         <a
                             href="#contato"
-                            class="botao botao-secundario"
+                            class="btn btn-secondary"
                         >
                             Falar conosco
                         </a>
@@ -119,6 +136,7 @@
                     </div>
 
                 </div>
+
 
                 <div class="hero-card">
 
@@ -150,47 +168,42 @@
             <div class="container diferenciais-grid">
 
                 <div class="diferencial">
-
                     <span>✨</span>
 
                     <div>
-                        <h3>Qualidade</h3>
-                        <p>Produtos selecionados</p>
+                        <strong>Qualidade</strong>
+                        <small>Produtos selecionados</small>
                     </div>
-
                 </div>
 
-                <div class="diferencial">
 
+                <div class="diferencial">
                     <span>💰</span>
 
                     <div>
-                        <h3>Bons preços</h3>
-                        <p>Preços acessíveis</p>
+                        <strong>Bons preços</strong>
+                        <small>Preços acessíveis</small>
                     </div>
-
                 </div>
 
-                <div class="diferencial">
 
+                <div class="diferencial">
                     <span>📦</span>
 
                     <div>
-                        <h3>Estoque</h3>
-                        <p>Quantidade controlada</p>
+                        <strong>Estoque</strong>
+                        <small>Quantidade controlada</small>
                     </div>
-
                 </div>
 
-                <div class="diferencial">
 
+                <div class="diferencial">
                     <span>📱</span>
 
                     <div>
-                        <h3>Pedido fácil</h3>
-                        <p>Pelo WhatsApp</p>
+                        <strong>Pedido fácil</strong>
+                        <small>Pelo WhatsApp</small>
                     </div>
-
                 </div>
 
             </div>
@@ -203,26 +216,29 @@
         ========================== -->
 
         <section
-            class="servicos-section"
+            class="servicos"
             id="servicos"
         >
 
             <div class="container">
 
-                <div class="section-titulo">
+                <div class="section-title">
 
-                    <span>NOSSOS SERVIÇOS</span>
+                    <span>
+                        NOSSOS SERVIÇOS
+                    </span>
 
                     <h2>
                         Produtos para sua limpeza
                     </h2>
 
                     <p>
-                        Escolha os produtos que deseja
-                        e coloque no seu carrinho.
+                        Escolha a categoria que deseja
+                        e encontre os produtos.
                     </p>
 
                 </div>
+
 
                 <div class="servicos-grid">
 
@@ -233,12 +249,12 @@
                         </div>
 
                         <h3>
-                            Produtos de limpeza
+                            Produtos de Limpeza
                         </h3>
 
                         <p>
-                            Produtos para facilitar a limpeza
-                            da sua casa.
+                            Produtos para a limpeza
+                            diária da sua casa.
                         </p>
 
                         <a href="#produtos">
@@ -259,8 +275,8 @@
                         </h3>
 
                         <p>
-                            Produtos para cuidar das suas roupas
-                            no dia a dia.
+                            Produtos para cuidar
+                            das suas roupas.
                         </p>
 
                         <a href="#produtos">
@@ -281,8 +297,8 @@
                         </h3>
 
                         <p>
-                            Acessórios para ajudar na organização
-                            e limpeza.
+                            Acessórios para facilitar
+                            a limpeza.
                         </p>
 
                         <a href="#produtos">
@@ -303,8 +319,8 @@
                         </h3>
 
                         <p>
-                            Produtos para deixar sua casa
-                            perfumada.
+                            Produtos para deixar
+                            sua casa perfumada.
                         </p>
 
                         <a href="#produtos">
@@ -325,45 +341,48 @@
         ========================== -->
 
         <section
-            class="produtos-section"
+            class="produtos"
             id="produtos"
         >
 
             <div class="container">
 
-                <div class="section-titulo">
+                <div class="section-title">
 
-                    <span>NOSSOS PRODUTOS</span>
+                    <span>
+                        NOSSOS PRODUTOS
+                    </span>
 
                     <h2>
-                        Produtos para sua limpeza
+                        Escolha seus produtos
                     </h2>
 
                     <p>
-                        Encontre tudo o que precisa para
-                        manter sua casa limpa e organizada.
+                        Navegue pelas categorias
+                        e adicione seus produtos ao carrinho.
                     </p>
 
                 </div>
 
 
-                <!-- BUSCA -->
+                <!-- PESQUISA -->
 
-                <div class="busca-produtos">
+                <div class="pesquisa-box">
 
                     <span>🔎</span>
 
                     <input
                         type="search"
                         id="pesquisaProdutos"
-                        placeholder="Pesquise um produto..."
-                        autocomplete="off"
+                        placeholder="Buscar produto..."
                     >
 
                 </div>
 
 
-                <!-- RESULTADO DA BUSCA -->
+                <!-- =====================
+                     RESULTADO DA PESQUISA
+                ====================== -->
 
                 <div
                     id="resultadoPesquisa"
@@ -372,19 +391,21 @@
 
 
                 <!-- =====================
-                     CATEGORIA LIMPEZA
+                     CARROSSEL 1
                 ====================== -->
 
-                <div
-                    class="categoria-produtos"
+                <section
+                    class="categoria"
                     data-categoria="limpeza"
                 >
 
-                    <div class="categoria-topo">
+                    <div class="categoria-header">
 
                         <div>
 
-                            <span>CATEGORIA</span>
+                            <span>
+                                CATEGORIA
+                            </span>
 
                             <h3>
                                 🧴 Produtos de Limpeza
@@ -392,24 +413,23 @@
 
                         </div>
 
-                        <div class="controles-carrossel">
+
+                        <div class="setas">
 
                             <button
                                 type="button"
-                                class="seta-carrossel"
+                                class="seta"
                                 data-carousel="carousel-limpeza"
                                 data-direction="-1"
-                                aria-label="Produtos anteriores"
                             >
                                 ‹
                             </button>
 
                             <button
                                 type="button"
-                                class="seta-carrossel"
+                                class="seta"
                                 data-carousel="carousel-limpeza"
                                 data-direction="1"
-                                aria-label="Próximos produtos"
                             >
                                 ›
                             </button>
@@ -418,28 +438,31 @@
 
                     </div>
 
+
                     <div
-                        class="produtos-carrossel"
+                        class="carrossel"
                         id="carousel-limpeza"
                     ></div>
 
-                </div>
+                </section>
 
 
                 <!-- =====================
-                     CATEGORIA LAVANDERIA
+                     CARROSSEL 2
                 ====================== -->
 
-                <div
-                    class="categoria-produtos"
+                <section
+                    class="categoria"
                     data-categoria="lavanderia"
                 >
 
-                    <div class="categoria-topo">
+                    <div class="categoria-header">
 
                         <div>
 
-                            <span>CATEGORIA</span>
+                            <span>
+                                CATEGORIA
+                            </span>
 
                             <h3>
                                 👕 Lavanderia
@@ -447,11 +470,12 @@
 
                         </div>
 
-                        <div class="controles-carrossel">
+
+                        <div class="setas">
 
                             <button
                                 type="button"
-                                class="seta-carrossel"
+                                class="seta"
                                 data-carousel="carousel-lavanderia"
                                 data-direction="-1"
                             >
@@ -460,7 +484,7 @@
 
                             <button
                                 type="button"
-                                class="seta-carrossel"
+                                class="seta"
                                 data-carousel="carousel-lavanderia"
                                 data-direction="1"
                             >
@@ -471,40 +495,44 @@
 
                     </div>
 
+
                     <div
-                        class="produtos-carrossel"
+                        class="carrossel"
                         id="carousel-lavanderia"
                     ></div>
 
-                </div>
+                </section>
 
 
                 <!-- =====================
-                     CATEGORIA ACESSÓRIOS
+                     CARROSSEL 3
                 ====================== -->
 
-                <div
-                    class="categoria-produtos"
+                <section
+                    class="categoria"
                     data-categoria="acessorios"
                 >
 
-                    <div class="categoria-topo">
+                    <div class="categoria-header">
 
                         <div>
 
-                            <span>CATEGORIA</span>
+                            <span>
+                                CATEGORIA
+                            </span>
 
                             <h3>
-                                🧹 Acessórios de Limpeza
+                                🧹 Acessórios
                             </h3>
 
                         </div>
 
-                        <div class="controles-carrossel">
+
+                        <div class="setas">
 
                             <button
                                 type="button"
-                                class="seta-carrossel"
+                                class="seta"
                                 data-carousel="carousel-acessorios"
                                 data-direction="-1"
                             >
@@ -513,7 +541,7 @@
 
                             <button
                                 type="button"
-                                class="seta-carrossel"
+                                class="seta"
                                 data-carousel="carousel-acessorios"
                                 data-direction="1"
                             >
@@ -524,28 +552,31 @@
 
                     </div>
 
+
                     <div
-                        class="produtos-carrossel"
+                        class="carrossel"
                         id="carousel-acessorios"
                     ></div>
 
-                </div>
+                </section>
 
 
                 <!-- =====================
-                     CATEGORIA PERFUMAÇÃO
+                     CARROSSEL 4
                 ====================== -->
 
-                <div
-                    class="categoria-produtos"
+                <section
+                    class="categoria"
                     data-categoria="perfumacao"
                 >
 
-                    <div class="categoria-topo">
+                    <div class="categoria-header">
 
                         <div>
 
-                            <span>CATEGORIA</span>
+                            <span>
+                                CATEGORIA
+                            </span>
 
                             <h3>
                                 🌸 Perfumação
@@ -553,11 +584,12 @@
 
                         </div>
 
-                        <div class="controles-carrossel">
+
+                        <div class="setas">
 
                             <button
                                 type="button"
-                                class="seta-carrossel"
+                                class="seta"
                                 data-carousel="carousel-perfumacao"
                                 data-direction="-1"
                             >
@@ -566,7 +598,7 @@
 
                             <button
                                 type="button"
-                                class="seta-carrossel"
+                                class="seta"
                                 data-carousel="carousel-perfumacao"
                                 data-direction="1"
                             >
@@ -577,12 +609,13 @@
 
                     </div>
 
+
                     <div
-                        class="produtos-carrossel"
+                        class="carrossel"
                         id="carousel-perfumacao"
                     ></div>
 
-                </div>
+                </section>
 
             </div>
 
@@ -600,9 +633,11 @@
 
             <div class="container">
 
-                <div class="section-titulo">
+                <div class="section-title">
 
-                    <span>COMO COMPRAR</span>
+                    <span>
+                        COMO COMPRAR
+                    </span>
 
                     <h2>
                         Faça seu pedido em poucos passos
@@ -621,7 +656,8 @@
                             <h3>Escolha</h3>
 
                             <p>
-                                Escolha os produtos que deseja.
+                                Escolha os produtos
+                                que deseja.
                             </p>
                         </div>
 
@@ -636,8 +672,8 @@
                             <h3>Carrinho</h3>
 
                             <p>
-                                Confira as quantidades e
-                                o valor total.
+                                Confira quantidades
+                                e valor total.
                             </p>
                         </div>
 
@@ -652,7 +688,8 @@
                             <h3>WhatsApp</h3>
 
                             <p>
-                                Envie seu pedido para confirmação.
+                                Envie o pedido
+                                para confirmação.
                             </p>
                         </div>
 
@@ -687,8 +724,8 @@
                     </h2>
 
                     <p>
-                        Entre em contato para tirar suas dúvidas
-                        ou confirmar seu pedido.
+                        Entre em contato para tirar
+                        suas dúvidas ou confirmar seu pedido.
                     </p>
 
                 </div>
@@ -699,19 +736,17 @@
                     <span>📱</span>
 
                     <div>
-
                         <small>WhatsApp</small>
 
                         <strong>
                             (11) 98318-4154
                         </strong>
-
                     </div>
 
                     <a
                         href="https://wa.me/5511983184154"
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
                     >
                         Falar pelo WhatsApp
                     </a>
@@ -726,39 +761,35 @@
 
 
     <!-- =========================
-         CARRINHO
+         MODAL DO CARRINHO
     ========================== -->
 
     <div
         class="carrinho-overlay"
-        id="carrinhoModal"
-        aria-hidden="true"
+        id="carrinhoOverlay"
     >
 
-        <div
-            class="carrinho"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="tituloCarrinho"
-        >
+        <aside class="carrinho">
 
-            <div class="carrinho-header">
+            <div class="carrinho-topo">
 
                 <div>
 
-                    <span>SEU PEDIDO</span>
+                    <span>
+                        SEU PEDIDO
+                    </span>
 
-                    <h2 id="tituloCarrinho">
+                    <h2>
                         🛒 Carrinho
                     </h2>
 
                 </div>
 
+
                 <button
                     type="button"
-                    id="fecharCarrinho"
                     class="fechar-carrinho"
-                    aria-label="Fechar carrinho"
+                    id="fecharCarrinho"
                 >
                     ×
                 </button>
@@ -766,17 +797,23 @@
             </div>
 
 
+            <!-- PRODUTOS DO CARRINHO -->
+
             <div
-                id="listaCarrinho"
                 class="lista-carrinho"
+                id="listaCarrinho"
             ></div>
 
 
-            <div class="carrinho-resumo">
+            <!-- RESUMO -->
 
-                <div class="total-carrinho">
+            <div class="carrinho-bottom">
 
-                    <span>Total</span>
+                <div class="total">
+
+                    <span>
+                        Total
+                    </span>
 
                     <strong id="totalCarrinho">
                         R$ 0,00
@@ -785,35 +822,30 @@
                 </div>
 
 
-                <div class="dados-pedido">
+                <label for="nomeCliente">
+                    Seu nome
+                </label>
 
-                    <label for="nomeCliente">
-                        Seu nome
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nomeCliente"
-                        placeholder="Digite seu nome"
-                    >
+                <input
+                    type="text"
+                    id="nomeCliente"
+                    placeholder="Digite seu nome"
+                >
 
 
-                    <label for="enderecoCliente">
-                        Endereço para entrega
-                    </label>
+                <label for="enderecoCliente">
+                    Endereço para entrega
+                </label>
 
-                    <textarea
-                        id="enderecoCliente"
-                        rows="3"
-                        placeholder="Digite seu endereço (opcional)"
-                    ></textarea>
-
-                </div>
+                <textarea
+                    id="enderecoCliente"
+                    placeholder="Digite seu endereço (opcional)"
+                ></textarea>
 
 
                 <button
                     type="button"
-                    class="botao-whatsapp"
+                    class="btn-whatsapp"
                     id="enviarWhatsApp"
                 >
                     📱 Enviar pedido pelo WhatsApp
@@ -822,34 +854,36 @@
 
                 <button
                     type="button"
-                    class="botao-limpar"
+                    class="btn-limpar"
                     id="limparCarrinho"
                 >
                     Limpar carrinho
                 </button>
 
 
-                <p class="aviso-pedido">
+                <small class="aviso">
                     O pedido será enviado para confirmação.
                     O pagamento não é realizado pelo site.
-                </p>
+                </small>
 
             </div>
 
-        </div>
+        </aside>
 
     </div>
 
 
-    <!-- =========================
-         TOAST
-    ========================== -->
+    <!-- TOAST -->
 
     <div
-        id="toast"
         class="toast"
+        id="toast"
     ></div>
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer class="footer">
 
@@ -875,4 +909,7 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
+
+     
