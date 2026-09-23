@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="RC Produtos de Limpeza - produtos para limpeza, lavanderia, organização e perfumação."
     >
 
     <title>RC Produtos de Limpeza</title>
@@ -16,590 +20,643 @@
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
 
     <header class="header">
 
-        <a href="#inicio" class="logo">
+        <div class="container header-container">
 
-            <div class="logo-icon">
-                RC
-            </div>
-
-            <div>
-                <strong>RC</strong>
-                <span>Produtos de Limpeza</span>
-            </div>
-
-        </a>
-
-
-        <nav class="menu">
-
-            <a href="#inicio">Início</a>
-
-            <a href="#servicos">Serviços</a>
-
-            <a href="#como-comprar">
-                Como comprar
+            <a href="#inicio" class="logo">
+                <span>RC</span>
+                <div>
+                    <strong>RC Produtos</strong>
+                    <small>de Limpeza</small>
+                </div>
             </a>
 
-            <a href="#contato">
-                Contato
-            </a>
+            <nav class="menu" id="menu">
 
-        </nav>
+                <a href="#inicio">Início</a>
 
+                <a href="#servicos">Serviços</a>
 
-        <button
-            class="btn-carrinho"
-            id="abrirCarrinho"
-        >
+                <a href="#produtos">Produtos</a>
 
-            🛒
+                <a href="#como-comprar">Como comprar</a>
 
-            <span>
-                Carrinho
-            </span>
+                <a href="#contato">Contato</a>
 
-            <b id="quantidadeCarrinho">
-                0
-            </b>
+            </nav>
 
-        </button>
+            <button
+                type="button"
+                class="botao-carrinho-header"
+                id="botaoCarrinho"
+            >
+                🛒
+                <span>Pedido</span>
+                <strong id="contadorCarrinho">0</strong>
+            </button>
+
+            <button
+                type="button"
+                class="menu-mobile"
+                id="menuMobile"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </button>
+
+        </div>
 
     </header>
 
 
-    <!-- ================= HERO ================= -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <main>
 
+        <section class="hero" id="inicio">
+
+            <div class="container hero-container">
+
+                <div class="hero-text">
+
+                    <span class="tag">
+                        QUALIDADE • ECONOMIA • PRATICIDADE
+                    </span>
+
+                    <h1>
+                        Produtos de limpeza
+                        <span>para sua casa.</span>
+                    </h1>
+
+                    <p>
+                        Encontre produtos para limpeza, organização
+                        e perfumação da sua casa.
+                    </p>
+
+                    <div class="hero-botoes">
+
+                        <a
+                            href="#produtos"
+                            class="botao botao-principal"
+                        >
+                            Ver produtos
+                        </a>
+
+                        <a
+                            href="#contato"
+                            class="botao botao-secundario"
+                        >
+                            Falar conosco
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-card">
+
+                    <div class="hero-icon">
+                        🧽
+                    </div>
+
+                    <h2>
+                        Casa limpa e perfumada
+                    </h2>
+
+                    <p>
+                        Produtos para facilitar sua rotina.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DIFERENCIAIS
+        ========================== -->
+
+        <section class="diferenciais">
+
+            <div class="container diferenciais-grid">
+
+                <div class="diferencial">
+
+                    <span>✨</span>
+
+                    <div>
+                        <h3>Qualidade</h3>
+                        <p>Produtos selecionados</p>
+                    </div>
+
+                </div>
+
+                <div class="diferencial">
+
+                    <span>💰</span>
+
+                    <div>
+                        <h3>Bons preços</h3>
+                        <p>Preços acessíveis</p>
+                    </div>
+
+                </div>
+
+                <div class="diferencial">
+
+                    <span>📦</span>
+
+                    <div>
+                        <h3>Estoque</h3>
+                        <p>Quantidade controlada</p>
+                    </div>
+
+                </div>
+
+                <div class="diferencial">
+
+                    <span>📱</span>
+
+                    <div>
+                        <h3>Pedido fácil</h3>
+                        <p>Pelo WhatsApp</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVIÇOS
+        ========================== -->
+
         <section
-            class="hero"
-            id="inicio"
+            class="servicos-section"
+            id="servicos"
         >
 
-            <div class="hero-conteudo">
+            <div class="container">
 
-                <p class="tag">
-                    QUALIDADE • ECONOMIA • PRATICIDADE
-                </p>
+                <div class="section-titulo">
 
-                <h1>
-                    Produtos de limpeza
-                    <span>para sua casa.</span>
-                </h1>
+                    <span>NOSSOS SERVIÇOS</span>
 
-                <p class="hero-texto">
+                    <h2>
+                        Produtos para sua limpeza
+                    </h2>
 
-                    Encontre produtos para limpeza,
-                    organização e perfumação da sua casa.
-
-                </p>
-
-
-                <div class="hero-botoes">
-
-                    <!-- AGORA O BOTÃO ESTÁ CONECTADO -->
-
-                    <a
-                        href="#servicos"
-                        class="btn btn-principal"
-                    >
-                        Ver serviços
-                    </a>
-
-
-                    <a
-                        href="#contato"
-                        class="btn btn-secundario"
-                    >
-                        Falar conosco
-                    </a>
+                    <p>
+                        Escolha os produtos que deseja
+                        e coloque no seu carrinho.
+                    </p>
 
                 </div>
 
-            </div>
+                <div class="servicos-grid">
+
+                    <article class="servico-card">
+
+                        <div class="servico-icon">
+                            🧴
+                        </div>
+
+                        <h3>
+                            Produtos de limpeza
+                        </h3>
+
+                        <p>
+                            Produtos para facilitar a limpeza
+                            da sua casa.
+                        </p>
+
+                        <a href="#produtos">
+                            Ver produtos →
+                        </a>
+
+                    </article>
 
 
-            <div class="hero-card">
+                    <article class="servico-card">
 
-                <div class="hero-icone">
-                    🧽
+                        <div class="servico-icon">
+                            👕
+                        </div>
+
+                        <h3>
+                            Lavanderia
+                        </h3>
+
+                        <p>
+                            Produtos para cuidar das suas roupas
+                            no dia a dia.
+                        </p>
+
+                        <a href="#produtos">
+                            Ver produtos →
+                        </a>
+
+                    </article>
+
+
+                    <article class="servico-card">
+
+                        <div class="servico-icon">
+                            🧹
+                        </div>
+
+                        <h3>
+                            Acessórios
+                        </h3>
+
+                        <p>
+                            Acessórios para ajudar na organização
+                            e limpeza.
+                        </p>
+
+                        <a href="#produtos">
+                            Ver produtos →
+                        </a>
+
+                    </article>
+
+
+                    <article class="servico-card">
+
+                        <div class="servico-icon">
+                            🌸
+                        </div>
+
+                        <h3>
+                            Perfumação
+                        </h3>
+
+                        <p>
+                            Produtos para deixar sua casa
+                            perfumada.
+                        </p>
+
+                        <a href="#produtos">
+                            Ver produtos →
+                        </a>
+
+                    </article>
+
                 </div>
-
-                <h2>
-                    Casa limpa e perfumada
-                </h2>
-
-                <p>
-                    Produtos para facilitar
-                    sua rotina.
-                </p>
 
             </div>
 
         </section>
 
 
-        <!-- ================= BENEFÍCIOS ================= -->
+        <!-- =========================
+             PRODUTOS
+        ========================== -->
 
-        <section class="beneficios">
-
-            <div class="beneficio">
-
-                <div class="beneficio-icone">
-                    ✨
-                </div>
-
-                <div>
-                    <strong>
-                        Qualidade
-                    </strong>
-
-                    <p>
-                        Produtos selecionados
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="beneficio">
-
-                <div class="beneficio-icone">
-                    💰
-                </div>
-
-                <div>
-                    <strong>
-                        Bons preços
-                    </strong>
-
-                    <p>
-                        Preços acessíveis
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="beneficio">
-
-                <div class="beneficio-icone">
-                    📦
-                </div>
-
-                <div>
-                    <strong>
-                        Estoque
-                    </strong>
-
-                    <p>
-                        Quantidade controlada
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="beneficio">
-
-                <div class="beneficio-icone">
-                    📱
-                </div>
-
-                <div>
-                    <strong>
-                        Pedido fácil
-                    </strong>
-
-                    <p>
-                        Pelo WhatsApp
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-            <!-- =========================
-     PRODUTOS
-========================= -->
-
-<section class="produtos-section" id="produtos">
-
-    <div class="produtos-header">
-        <span class="titulo-pequeno">NOSSOS PRODUTOS</span>
-
-        <h2>
-            Produtos para sua limpeza
-        </h2>
-
-        <p>
-            Encontre tudo o que precisa para manter sua casa limpa e organizada.
-        </p>
-    </div>
-
-
-    <!-- PESQUISA -->
-
-    <div class="pesquisa-produtos">
-
-        <span class="icone-pesquisa">🔎</span>
-
-        <input
-            type="text"
-            id="pesquisaProdutos"
-            placeholder="Pesquise um produto..."
+        <section
+            class="produtos-section"
+            id="produtos"
         >
 
-    </div>
+            <div class="container">
 
+                <div class="section-titulo">
 
-    <!-- RESULTADO DA PESQUISA -->
+                    <span>NOSSOS PRODUTOS</span>
 
-    <div
-        id="resultadoPesquisa"
-        class="resultado-pesquisa"
-    ></div>
+                    <h2>
+                        Produtos para sua limpeza
+                    </h2>
 
+                    <p>
+                        Encontre tudo o que precisa para
+                        manter sua casa limpa e organizada.
+                    </p>
 
-    <!-- =========================
-         CATEGORIA 1
-    ========================== -->
+                </div>
 
-    <div
-        class="categoria-produtos"
-        data-categoria="limpeza"
-    >
 
-        <div class="categoria-header">
+                <!-- BUSCA -->
 
-            <div>
-                <span class="categoria-label">
-                    CATEGORIA
-                </span>
+                <div class="busca-produtos">
 
-                <h3>
-                    🧴 Produtos de Limpeza
-                </h3>
-            </div>
+                    <span>🔎</span>
 
-            <div class="controles-carrossel">
+                    <input
+                        type="search"
+                        id="pesquisaProdutos"
+                        placeholder="Pesquise um produto..."
+                        autocomplete="off"
+                    >
 
-                <button
-                    class="seta-carrossel"
-                    onclick="moverCarrossel('carousel-limpeza', -1)"
-                >
-                    ‹
-                </button>
+                </div>
 
-                <button
-                    class="seta-carrossel"
-                    onclick="moverCarrossel('carousel-limpeza', 1)"
-                >
-                    ›
-                </button>
 
-            </div>
+                <!-- RESULTADO DA BUSCA -->
 
-        </div>
+                <div
+                    id="resultadoPesquisa"
+                    class="resultado-pesquisa"
+                ></div>
 
 
-        <div
-            class="produtos-carrossel"
-            id="carousel-limpeza"
-        ></div>
+                <!-- =====================
+                     CATEGORIA LIMPEZA
+                ====================== -->
 
-    </div>
-
-
-
-    <!-- =========================
-         CATEGORIA 2
-    ========================== -->
-
-    <div
-        class="categoria-produtos"
-        data-categoria="lavanderia"
-    >
-
-        <div class="categoria-header">
-
-            <div>
-
-                <span class="categoria-label">
-                    CATEGORIA
-                </span>
-
-                <h3>
-                    👕 Lavanderia
-                </h3>
-
-            </div>
-
-
-            <div class="controles-carrossel">
-
-                <button
-                    class="seta-carrossel"
-                    onclick="moverCarrossel('carousel-lavanderia', -1)"
-                >
-                    ‹
-                </button>
-
-                <button
-                    class="seta-carrossel"
-                    onclick="moverCarrossel('carousel-lavanderia', 1)"
-                >
-                    ›
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <div
-            class="produtos-carrossel"
-            id="carousel-lavanderia"
-        ></div>
-
-    </div>
-
-
-
-    <!-- =========================
-         CATEGORIA 3
-    ========================== -->
-
-    <div
-        class="categoria-produtos"
-        data-categoria="acessorios"
-    >
-
-        <div class="categoria-header">
-
-            <div>
-
-                <span class="categoria-label">
-                    CATEGORIA
-                </span>
-
-                <h3>
-                    🧹 Acessórios de Limpeza
-                </h3>
-
-            </div>
-
-
-            <div class="controles-carrossel">
-
-                <button
-                    class="seta-carrossel"
-                    onclick="moverCarrossel('carousel-acessorios', -1)"
-                >
-                    ‹
-                </button>
-
-                <button
-                    class="seta-carrossel"
-                    onclick="moverCarrossel('carousel-acessorios', 1)"
-                >
-                    ›
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <div
-            class="produtos-carrossel"
-            id="carousel-acessorios"
-        ></div>
-
-    </div>
-
-
-
-    <!-- =========================
-         CATEGORIA 4
-    ========================== -->
-
-    <div
-        class="categoria-produtos"
-        data-categoria="perfumacao"
-    >
-
-        <div class="categoria-header">
-
-            <div>
-
-                <span class="categoria-label">
-                    CATEGORIA
-                </span>
-
-                <h3>
-                    🌸 Perfumação
-                </h3>
-
-            </div>
-
-
-            <div class="controles-carrossel">
-
-                <button
-                    class="seta-carrossel"
-                    onclick="moverCarrossel('carousel-perfumacao', -1)"
-                >
-                    ‹
-                </button>
-
-                <button
-                    class="seta-carrossel"
-                    onclick="moverCarrossel('carousel-perfumacao', 1)"
-                >
-                    ›
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <div
-            class="produtos-carrossel"
-            id="carousel-perfumacao"
-        ></div>
-
-    </div>
-
-</section>
-
-
-            <!-- PESQUISA -->
-
-            <div class="pesquisa">
-
-                <span>
-                    🔎
-                </span>
-
-                <input
-                    type="text"
-                    id="campoPesquisa"
-                    placeholder="Buscar produto..."
+                <div
+                    class="categoria-produtos"
+                    data-categoria="limpeza"
                 >
 
-            </div>
+                    <div class="categoria-topo">
+
+                        <div>
+
+                            <span>CATEGORIA</span>
+
+                            <h3>
+                                🧴 Produtos de Limpeza
+                            </h3>
+
+                        </div>
+
+                        <div class="controles-carrossel">
+
+                            <button
+                                type="button"
+                                class="seta-carrossel"
+                                data-carousel="carousel-limpeza"
+                                data-direction="-1"
+                                aria-label="Produtos anteriores"
+                            >
+                                ‹
+                            </button>
+
+                            <button
+                                type="button"
+                                class="seta-carrossel"
+                                data-carousel="carousel-limpeza"
+                                data-direction="1"
+                                aria-label="Próximos produtos"
+                            >
+                                ›
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="produtos-carrossel"
+                        id="carousel-limpeza"
+                    ></div>
+
+                </div>
 
 
-            <!-- PRODUTOS SERÃO CRIADOS PELO JS -->
+                <!-- =====================
+                     CATEGORIA LAVANDERIA
+                ====================== -->
 
-            <div
-                class="produtos"
-                id="listaProdutos"
-            >
+                <div
+                    class="categoria-produtos"
+                    data-categoria="lavanderia"
+                >
 
-            </div>
+                    <div class="categoria-topo">
+
+                        <div>
+
+                            <span>CATEGORIA</span>
+
+                            <h3>
+                                👕 Lavanderia
+                            </h3>
+
+                        </div>
+
+                        <div class="controles-carrossel">
+
+                            <button
+                                type="button"
+                                class="seta-carrossel"
+                                data-carousel="carousel-lavanderia"
+                                data-direction="-1"
+                            >
+                                ‹
+                            </button>
+
+                            <button
+                                type="button"
+                                class="seta-carrossel"
+                                data-carousel="carousel-lavanderia"
+                                data-direction="1"
+                            >
+                                ›
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="produtos-carrossel"
+                        id="carousel-lavanderia"
+                    ></div>
+
+                </div>
 
 
-            <!-- MENSAGEM CASO NÃO ENCONTRE -->
+                <!-- =====================
+                     CATEGORIA ACESSÓRIOS
+                ====================== -->
 
-            <div
-                class="sem-produtos"
-                id="semProdutos"
-            >
+                <div
+                    class="categoria-produtos"
+                    data-categoria="acessorios"
+                >
 
-                😕
-                <h3>
-                    Produto não encontrado
-                </h3>
+                    <div class="categoria-topo">
 
-                <p>
-                    Tente pesquisar por outro nome.
-                </p>
+                        <div>
+
+                            <span>CATEGORIA</span>
+
+                            <h3>
+                                🧹 Acessórios de Limpeza
+                            </h3>
+
+                        </div>
+
+                        <div class="controles-carrossel">
+
+                            <button
+                                type="button"
+                                class="seta-carrossel"
+                                data-carousel="carousel-acessorios"
+                                data-direction="-1"
+                            >
+                                ‹
+                            </button>
+
+                            <button
+                                type="button"
+                                class="seta-carrossel"
+                                data-carousel="carousel-acessorios"
+                                data-direction="1"
+                            >
+                                ›
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="produtos-carrossel"
+                        id="carousel-acessorios"
+                    ></div>
+
+                </div>
+
+
+                <!-- =====================
+                     CATEGORIA PERFUMAÇÃO
+                ====================== -->
+
+                <div
+                    class="categoria-produtos"
+                    data-categoria="perfumacao"
+                >
+
+                    <div class="categoria-topo">
+
+                        <div>
+
+                            <span>CATEGORIA</span>
+
+                            <h3>
+                                🌸 Perfumação
+                            </h3>
+
+                        </div>
+
+                        <div class="controles-carrossel">
+
+                            <button
+                                type="button"
+                                class="seta-carrossel"
+                                data-carousel="carousel-perfumacao"
+                                data-direction="-1"
+                            >
+                                ‹
+                            </button>
+
+                            <button
+                                type="button"
+                                class="seta-carrossel"
+                                data-carousel="carousel-perfumacao"
+                                data-direction="1"
+                            >
+                                ›
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="produtos-carrossel"
+                        id="carousel-perfumacao"
+                    ></div>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- ================= COMO COMPRAR ================= -->
+        <!-- =========================
+             COMO COMPRAR
+        ========================== -->
 
         <section
             class="como-comprar"
             id="como-comprar"
         >
 
-            <div class="titulo">
+            <div class="container">
 
-                <span>
-                    COMO COMPRAR
-                </span>
+                <div class="section-titulo">
 
-                <h2>
-                    Faça seu pedido em poucos passos
-                </h2>
+                    <span>COMO COMPRAR</span>
 
-            </div>
-
-
-            <div class="passos">
-
-                <div class="passo">
-
-                    <span>
-                        01
-                    </span>
-
-                    <h3>
-                        Escolha
-                    </h3>
-
-                    <p>
-                        Escolha os produtos
-                        que deseja.
-                    </p>
+                    <h2>
+                        Faça seu pedido em poucos passos
+                    </h2>
 
                 </div>
 
 
-                <div class="passo">
+                <div class="passos">
 
-                    <span>
-                        02
-                    </span>
+                    <div class="passo">
 
-                    <h3>
-                        Carrinho
-                    </h3>
+                        <strong>01</strong>
 
-                    <p>
-                        Confira as quantidades
-                        e o valor total.
-                    </p>
+                        <div>
+                            <h3>Escolha</h3>
 
-                </div>
+                            <p>
+                                Escolha os produtos que deseja.
+                            </p>
+                        </div>
+
+                    </div>
 
 
-                <div class="passo">
+                    <div class="passo">
 
-                    <span>
-                        03
-                    </span>
+                        <strong>02</strong>
 
-                    <h3>
-                        WhatsApp
-                    </h3>
+                        <div>
+                            <h3>Carrinho</h3>
 
-                    <p>
-                        Envie seu pedido
-                        para confirmação.
-                    </p>
+                            <p>
+                                Confira as quantidades e
+                                o valor total.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="passo">
+
+                        <strong>03</strong>
+
+                        <div>
+                            <h3>WhatsApp</h3>
+
+                            <p>
+                                Envie seu pedido para confirmação.
+                            </p>
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -608,48 +665,58 @@
         </section>
 
 
-        <!-- ================= CONTATO ================= -->
+        <!-- =========================
+             CONTATO
+        ========================== -->
 
         <section
             class="contato"
             id="contato"
         >
 
-            <div>
+            <div class="container contato-container">
 
-                <span class="tag">
-                    ENTRE EM CONTATO
-                </span>
+                <div>
 
-                <h2>
-                    Precisa de ajuda?
-                </h2>
+                    <span class="tag">
+                        ENTRE EM CONTATO
+                    </span>
 
-                <p>
-                    Entre em contato para tirar
-                    suas dúvidas ou confirmar seu pedido.
-                </p>
+                    <h2>
+                        Precisa de ajuda?
+                    </h2>
 
-            </div>
+                    <p>
+                        Entre em contato para tirar suas dúvidas
+                        ou confirmar seu pedido.
+                    </p>
+
+                </div>
 
 
-            <div class="contato-card">
+                <div class="contato-card">
 
-                <h3>
-                    📱 WhatsApp
-                </h3>
+                    <span>📱</span>
 
-                <p>
-                    (11) 98318-4154
-                </p>
+                    <div>
 
-                <a
-                    href="https://wa.me/5511983184154"
-                    target="_blank"
-                    class="whatsapp"
-                >
-                    Falar pelo WhatsApp
-                </a>
+                        <small>WhatsApp</small>
+
+                        <strong>
+                            (11) 98318-4154
+                        </strong>
+
+                    </div>
+
+                    <a
+                        href="https://wa.me/5511983184154"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Falar pelo WhatsApp
+                    </a>
+
+                </div>
 
             </div>
 
@@ -657,84 +724,155 @@
 
     </main>
 
-<!-- CARRINHO -->
 
-<div
-    id="carrinhoModal"
-    class="carrinho-modal"
->
+    <!-- =========================
+         CARRINHO
+    ========================== -->
 
-    <div class="carrinho-conteudo">
+    <div
+        class="carrinho-overlay"
+        id="carrinhoModal"
+        aria-hidden="true"
+    >
 
-        <button
-            id="fecharCarrinho"
-            type="button"
+        <div
+            class="carrinho"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloCarrinho"
         >
-            ×
-        </button>
+
+            <div class="carrinho-header">
+
+                <div>
+
+                    <span>SEU PEDIDO</span>
+
+                    <h2 id="tituloCarrinho">
+                        🛒 Carrinho
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="fecharCarrinho"
+                    class="fechar-carrinho"
+                    aria-label="Fechar carrinho"
+                >
+                    ×
+                </button>
+
+            </div>
 
 
-        <h2>
-            🛒 Carrinho
-        </h2>
+            <div
+                id="listaCarrinho"
+                class="lista-carrinho"
+            ></div>
 
 
-        <div id="listaCarrinho">
+            <div class="carrinho-resumo">
 
-            <!-- Produtos aparecem aqui -->
+                <div class="total-carrinho">
+
+                    <span>Total</span>
+
+                    <strong id="totalCarrinho">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+                <div class="dados-pedido">
+
+                    <label for="nomeCliente">
+                        Seu nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeCliente"
+                        placeholder="Digite seu nome"
+                    >
+
+
+                    <label for="enderecoCliente">
+                        Endereço para entrega
+                    </label>
+
+                    <textarea
+                        id="enderecoCliente"
+                        rows="3"
+                        placeholder="Digite seu endereço (opcional)"
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="botao-whatsapp"
+                    id="enviarWhatsApp"
+                >
+                    📱 Enviar pedido pelo WhatsApp
+                </button>
+
+
+                <button
+                    type="button"
+                    class="botao-limpar"
+                    id="limparCarrinho"
+                >
+                    Limpar carrinho
+                </button>
+
+
+                <p class="aviso-pedido">
+                    O pedido será enviado para confirmação.
+                    O pagamento não é realizado pelo site.
+                </p>
+
+            </div>
 
         </div>
-
-
-        <div class="carrinho-total">
-
-            <span>
-                Total
-            </span>
-
-            <strong id="totalCarrinho">
-                R$ 0,00
-            </strong>
-
-        </div>
-
-
-        <button
-            type="button"
-            onclick="limparCarrinho()"
-            class="btn-limpar-carrinho"
-        >
-            🧹 Limpar carrinho
-        </button>
 
     </div>
 
-</div>
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    ></div>
 
 
-    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
 
-    <footer>
+        <div class="container">
 
-        <div class="footer-logo">
-            RC
+            <strong>
+                RC Produtos de Limpeza
+            </strong>
+
+            <p>
+                © 2026 RC Produtos de Limpeza
+            </p>
+
+            <small>
+                Sua casa mais limpa, organizada e perfumada.
+            </small>
+
         </div>
-
-        <p>
-            © 2026 RC Produtos de Limpeza
-        </p>
-
-        <span>
-            Sua casa mais limpa, organizada e perfumada.
-        </span>
 
     </footer>
 
 
-    <!-- JAVASCRIPT -->
-
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 
 </body>
-
 </html>
