@@ -224,31 +224,6 @@
 
         </section>
 
-
-        <!-- ================= SERVIÇOS ================= -->
-
-        <section
-            class="servicos"
-            id="servicos"
-        >
-
-            <div class="titulo">
-
-                <span>
-                    NOSSOS SERVIÇOS
-                </span>
-
-                <h2>
-                    Produtos para sua limpeza
-                </h2>
-
-                <p>
-                    Escolha os produtos e coloque
-                    no seu carrinho.
-                </p>
-
-            </div>
-
             <!-- =========================
      PRODUTOS
 ========================= -->
@@ -682,109 +657,59 @@
 
     </main>
 
+<!-- CARRINHO -->
 
-    <!-- ================= CARRINHO ================= -->
+<div
+    id="carrinhoModal"
+    class="carrinho-modal"
+>
 
-    <div
-        class="carrinho-fundo"
-        id="fundoCarrinho"
-    ></div>
+    <div class="carrinho-conteudo">
 
-
-    <aside
-        class="carrinho"
-        id="carrinho"
-    >
-
-        <div class="carrinho-header">
-
-            <div>
-
-                <span>
-                    SEU PEDIDO
-                </span>
-
-                <h2>
-                    Carrinho
-                </h2>
-
-            </div>
-
-
-            <button
-                id="fecharCarrinho"
-                class="fechar"
-            >
-                ×
-            </button>
-
-        </div>
-
-
-        <!-- ITENS DO CARRINHO -->
-
-        <div
-            class="itens-carrinho"
-            id="itensCarrinho"
+        <button
+            id="fecharCarrinho"
+            type="button"
         >
+            ×
+        </button>
+
+
+        <h2>
+            🛒 Carrinho
+        </h2>
+
+
+        <div id="listaCarrinho">
+
+            <!-- Produtos aparecem aqui -->
 
         </div>
 
 
-        <!-- RODAPÉ -->
+        <div class="carrinho-total">
 
-        <div class="carrinho-footer">
+            <span>
+                Total
+            </span>
 
-            <div class="total">
-
-                <span>
-                    Total
-                </span>
-
-                <strong id="totalCarrinho">
-                    R$ 0,00
-                </strong>
-
-            </div>
-
-
-            <input
-                type="text"
-                id="nomeCliente"
-                placeholder="Seu nome"
-            >
-
-
-            <input
-                type="text"
-                id="enderecoCliente"
-                placeholder="Endereço para entrega"
-            >
-
-
-            <button
-                id="enviarWhatsApp"
-                class="btn-whatsapp"
-            >
-
-                📱
-                Enviar pedido pelo WhatsApp
-
-            </button>
-
-
-            <button
-                id="limparCarrinho"
-                class="limpar"
-            >
-
-                Limpar carrinho
-
-            </button>
+            <strong id="totalCarrinho">
+                R$ 0,00
+            </strong>
 
         </div>
 
-    </aside>
+
+        <button
+            type="button"
+            onclick="limparCarrinho()"
+            class="btn-limpar-carrinho"
+        >
+            🧹 Limpar carrinho
+        </button>
+
+    </div>
+
+</div>
 
 
     <!-- ================= FOOTER ================= -->
