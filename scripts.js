@@ -1,625 +1,466 @@
-/* ==================================================
-   PRODUTOS
-================================================== */
+/* =========================================
+   PRODUTOS DA LOJA
+========================================= */
 
 const produtos = [
 
+    // ==============================
+    // PRODUTOS DE LIMPEZA
+    // ==============================
+
     {
         id: 1,
-        nome: "Sabão líquido",
-        categoria: "Limpeza",
-        descricao: "Azul / Verde / Cereja / Branca / Erva-doce",
-        preco: 14.40,
-        estoque: 10,
-        icone: "🧴"
+        nome: "Água sanitária 5L",
+        preco: 9.60,
+        estoque: 20,
+        categoria: "limpeza",
+        imagem: "img/agua-sanitara-5l.jpg",
+        descricao: "Água sanitária para limpeza geral."
     },
 
     {
         id: 2,
-        nome: "Água sanitária 5L",
-        categoria: "Limpeza",
-        descricao: "Para limpeza geral",
-        preco: 9.60,
-        estoque: 10,
-        icone: "💧"
+        nome: "Cloro",
+        preco: 16.00,
+        estoque: 20,
+        categoria: "limpeza",
+        imagem: "img/cloro.jpg",
+        descricao: "Cloro para limpeza."
     },
 
     {
         id: 3,
-        nome: "Cloro",
-        categoria: "Limpeza",
-        descricao: "Produto para limpeza",
-        preco: 16.20,
-        estoque: 10,
-        icone: "🧪"
+        nome: "Cloro 5L",
+        preco: 32.00,
+        estoque: 20,
+        categoria: "limpeza",
+        imagem: "img/cloro-5l.jpg",
+        descricao: "Cloro em embalagem de 5 litros."
     },
 
     {
         id: 4,
-        nome: "Cloro 5L",
-        categoria: "Limpeza",
-        descricao: "Embalagem econômica",
-        preco: 32.00,
-        estoque: 8,
-        icone: "🧪"
+        nome: "Limpador perfumado",
+        preco: 17.60,
+        estoque: 20,
+        categoria: "limpeza",
+        imagem: "img/limpador-perfumado.jpg",
+        descricao: "Limpador perfumado para diversos ambientes."
     },
 
     {
         id: 5,
-        nome: "Limpador perfumado roxo",
-        categoria: "Perfumado",
-        descricao: "Perfume agradável para sua casa",
-        preco: 17.60,
-        estoque: 8,
-        icone: "🌸"
+        nome: "Pinho",
+        preco: 14.40,
+        estoque: 20,
+        categoria: "limpeza",
+        imagem: "img/pinho.jpg",
+        descricao: "Produto para limpeza e desinfecção."
     },
 
     {
         id: 6,
-        nome: "Pinho",
-        categoria: "Limpeza",
-        descricao: "Limpador para sua casa",
-        preco: 14.40,
-        estoque: 10,
-        icone: "🧴"
+        nome: "Pereirão",
+        preco: 23.20,
+        estoque: 20,
+        categoria: "limpeza",
+        imagem: "img/pereirao.jpg",
+        descricao: "Produto para limpeza geral."
     },
 
     {
         id: 7,
-        nome: "Pereirão",
-        categoria: "Limpeza",
-        descricao: "Produto para limpeza pesada",
-        preco: 23.20,
-        estoque: 6,
-        icone: "🧹"
+        nome: "Sabão querosene",
+        preco: 18.40,
+        estoque: 20,
+        categoria: "limpeza",
+        imagem: "img/sabao-querosene.jpg",
+        descricao: "Sabão para limpeza pesada."
     },
 
     {
         id: 8,
-        nome: "Sabão querosene",
-        categoria: "Limpeza",
-        descricao: "Para limpeza geral",
-        preco: 18.40,
-        estoque: 7,
-        icone: "🧼"
+        nome: "Detergente neutro",
+        preco: 12.00,
+        estoque: 20,
+        categoria: "limpeza",
+        imagem: "img/detergente-neutro.jpg",
+        descricao: "Detergente neutro."
     },
+
+
+    // ==============================
+    // LAVANDERIA
+    // ==============================
 
     {
         id: 9,
         nome: "Sabão líquido azul 5L",
-        categoria: "Econômico",
-        descricao: "Embalagem de 5 litros",
         preco: 25.50,
-        estoque: 5,
-        icone: "🧴"
+        estoque: 20,
+        categoria: "lavanderia",
+        imagem: "img/sabao-liquido-azul.jpg",
+        descricao: "Sabão líquido para roupas."
     },
 
     {
         id: 10,
-        nome: "Detergente neutro / coco",
-        categoria: "Detergente",
-        descricao: "Para louças e limpeza",
-        preco: 12.00,
-        estoque: 15,
-        icone: "🧴"
+        nome: "Sabão líquido branco",
+        preco: 14.40,
+        estoque: 20,
+        categoria: "lavanderia",
+        imagem: "img/sabao-liquido-branco.jpg",
+        descricao: "Sabão líquido para lavagem de roupas."
     },
 
     {
         id: 11,
-        nome: "Pequeno",
-        categoria: "Limpeza",
-        descricao: "Produto de limpeza",
-        preco: 3.00,
+        nome: "Tira manchas",
+        preco: 16.40,
         estoque: 20,
-        icone: "🧴"
+        categoria: "lavanderia",
+        imagem: "img/tira-manchas.jpg",
+        descricao: "Remove manchas de tecidos."
     },
 
     {
         id: 12,
-        nome: "Vernonez",
-        categoria: "Limpeza",
-        descricao: "Produto para limpeza",
-        preco: 9.60,
-        estoque: 10,
-        icone: "🧴"
+        nome: "Amaciante",
+        preco: 13.60,
+        estoque: 20,
+        categoria: "lavanderia",
+        imagem: "img/amaciante.jpg",
+        descricao: "Amaciante para roupas."
     },
+
+
+    // ==============================
+    // ACESSÓRIOS
+    // ==============================
 
     {
         id: 13,
-        nome: "Limpador com coco",
-        categoria: "Limpeza",
-        descricao: "Para limpeza da casa",
-        preco: 6.40,
-        estoque: 10,
-        icone: "🧽"
+        nome: "Borrifador",
+        preco: 4.60,
+        estoque: 20,
+        categoria: "acessorios",
+        imagem: "img/borrifador.jpg",
+        descricao: "Borrifador para produtos de limpeza."
     },
 
     {
         id: 14,
-        nome: "Tira manchas",
-        categoria: "Limpeza",
-        descricao: "Ajuda na remoção de manchas",
-        preco: 16.40,
-        estoque: 7,
-        icone: "✨"
+        nome: "Vassoura",
+        preco: 9.60,
+        estoque: 20,
+        categoria: "acessorios",
+        imagem: "img/vassoura.jpg",
+        descricao: "Vassoura para limpeza."
     },
 
     {
         id: 15,
-        nome: "Cheirinho",
-        categoria: "Perfumação",
-        descricao: "Perfume para ambientes",
-        preco: 14.40,
-        estoque: 10,
-        icone: "🌺"
+        nome: "Rodo",
+        preco: 13.60,
+        estoque: 20,
+        categoria: "acessorios",
+        imagem: "img/rodo.jpg",
+        descricao: "Rodo para pisos."
     },
 
     {
         id: 16,
-        nome: "Borrifador",
-        categoria: "Acessórios",
-        descricao: "Ideal para produtos de limpeza",
-        preco: 18.40,
-        estoque: 8,
-        icone: "🧴"
+        nome: "Lixeira",
+        preco: 10.40,
+        estoque: 20,
+        categoria: "acessorios",
+        imagem: "img/lixeira.jpg",
+        descricao: "Lixeira para ambientes domésticos."
     },
 
     {
         id: 17,
-        nome: "Lustra móveis",
-        categoria: "Móveis",
-        descricao: "Para móveis",
-        preco: 10.40,
-        estoque: 8,
-        icone: "🪑"
+        nome: "Limpa alumínio",
+        preco: 7.40,
+        estoque: 20,
+        categoria: "acessorios",
+        imagem: "img/limpa-aluminio.jpg",
+        descricao: "Produto para limpeza de alumínio."
     },
 
     {
         id: 18,
-        nome: "Limpa alumínio",
-        categoria: "Limpeza",
-        descricao: "Para limpeza de alumínio",
-        preco: 7.40,
-        estoque: 10,
-        icone: "✨"
+        nome: "Sabão em pedra",
+        preco: 4.20,
+        estoque: 20,
+        categoria: "acessorios",
+        imagem: "img/sabao-pedra.jpg",
+        descricao: "Sabão em pedra."
     },
+
+
+    // ==============================
+    // PERFUMAÇÃO
+    // ==============================
 
     {
         id: 19,
-        nome: "Sabão em pedra",
-        categoria: "Sabão",
-        descricao: "Para limpeza",
-        preco: 4.00,
+        nome: "Cheirinho",
+        preco: 14.40,
         estoque: 20,
-        icone: "🧼"
+        categoria: "perfumacao",
+        imagem: "img/cheirinho.jpg",
+        descricao: "Aromatizador para ambientes."
     },
 
     {
         id: 20,
-        nome: "Limpa vidro",
-        categoria: "Vidros",
-        descricao: "Para vidros e superfícies",
+        nome: "Cheirinho para cama e cozinha",
         preco: 14.40,
-        estoque: 8,
-        icone: "🪟"
+        estoque: 20,
+        categoria: "perfumacao",
+        imagem: "img/cheirinho-cama-cozinha.jpg",
+        descricao: "Perfume para cama e cozinha."
     },
 
     {
         id: 21,
-        nome: "Pano de chão",
-        categoria: "Acessórios",
-        descricao: "Para limpeza doméstica",
-        preco: 3.00,
+        nome: "Produto para dar cheiro",
+        preco: 4.25,
         estoque: 20,
-        icone: "🧹"
+        categoria: "perfumacao",
+        imagem: "img/produto-cheiro.jpg",
+        descricao: "Produto para perfumar ambientes."
     },
 
     {
         id: 22,
-        nome: "Álcool azul / rosa / verde",
-        categoria: "Limpeza",
-        descricao: "Opções de cores",
-        preco: 9.60,
-        estoque: 12,
-        icone: "🧴"
-    },
-
-    {
-        id: 23,
-        nome: "Multiuso verde",
-        categoria: "Multiuso",
-        descricao: "Para diversas superfícies",
-        preco: 13.60,
-        estoque: 10,
-        icone: "🧴"
-    },
-
-    {
-        id: 24,
-        nome: "Ricardo",
-        categoria: "Limpeza",
-        descricao: "Produto de limpeza",
-        preco: 13.60,
-        estoque: 10,
-        icone: "🧴"
-    },
-
-    {
-        id: 25,
-        nome: "Amaciante",
-        categoria: "Limpeza",
-        descricao: "Para deixar as roupas perfumadas",
+        nome: "Limpa móveis",
         preco: 10.40,
-        estoque: 12,
-        icone: "🧴"
-    },
-
-    {
-        id: 26,
-        nome: "Pequeno verde",
-        categoria: "Limpeza",
-        descricao: "Produto de limpeza",
-        preco: 4.25,
-        estoque: 15,
-        icone: "🧴"
+        estoque: 20,
+        categoria: "perfumacao",
+        imagem: "img/limpa-moveis.jpg",
+        descricao: "Limpa e perfuma móveis."
     }
 
 ];
 
+/* =========================================
+   CRIAR CARD DO PRODUTO
+========================================= */
 
-/* ==================================================
-   CARRINHO
-================================================== */
+function criarCardProduto(produto) {
 
-let carrinho = JSON.parse(
-    localStorage.getItem("carrinhoRC")
-) || [];
+    const card = document.createElement("div");
 
+    card.className = "produto-card";
 
-/* ==================================================
-   ELEMENTOS
-================================================== */
+    card.innerHTML = `
 
-const listaProdutos =
-    document.getElementById("listaProdutos");
+        <div class="produto-imagem">
 
-const itensCarrinho =
-    document.getElementById("itensCarrinho");
-
-const totalCarrinho =
-    document.getElementById("totalCarrinho");
-
-const quantidadeCarrinho =
-    document.getElementById("quantidadeCarrinho");
-
-const carrinhoElemento =
-    document.getElementById("carrinho");
-
-const fundoCarrinho =
-    document.getElementById("fundoCarrinho");
-
-const campoPesquisa =
-    document.getElementById("campoPesquisa");
-
-const semProdutos =
-    document.getElementById("semProdutos");
-
-
-/* ==================================================
-   FORMATAÇÃO DE DINHEIRO
-================================================== */
-
-function formatarPreco(valor) {
-
-    return valor.toLocaleString(
-        "pt-BR",
-        {
-            style: "currency",
-            currency: "BRL"
-        }
-    );
-
-}
-
-
-/* ==================================================
-   MOSTRAR PRODUTOS
-================================================== */
-
-function mostrarProdutos(lista = produtos) {
-
-    listaProdutos.innerHTML = "";
-
-
-    if (lista.length === 0) {
-
-        semProdutos.style.display = "block";
-
-        return;
-
-    }
-
-
-    semProdutos.style.display = "none";
-
-
-    lista.forEach(produto => {
-
-        const itemNoCarrinho =
-            carrinho.find(
-                item => item.id === produto.id
-            );
-
-
-        const quantidadeAtual =
-            itemNoCarrinho
-                ? itemNoCarrinho.quantidade
-                : 0;
-
-
-        const estoqueDisponivel =
-            produto.estoque - quantidadeAtual;
-
-
-        const card =
-            document.createElement("article");
-
-        card.className = "produto";
-
-
-        card.innerHTML = `
-
-            <div class="produto-imagem">
-                ${produto.icone}
-            </div>
-
-            <span class="produto-categoria">
-                ${produto.categoria}
-            </span>
-
-            <h3>
-                ${produto.nome}
-            </h3>
-
-            <p>
-                ${produto.descricao}
-            </p>
-
-            <div class="estoque">
-                Disponível:
-                <strong>
-                    ${estoqueDisponivel}
-                </strong>
-                unidade(s)
-            </div>
-
-            <strong class="preco">
-                ${formatarPreco(produto.preco)}
-            </strong>
-
-            <button
-                class="btn-adicionar"
-                onclick="adicionarCarrinho(${produto.id})"
-                ${estoqueDisponivel <= 0 ? "disabled" : ""}
+            <img
+                src="${produto.imagem}"
+                alt="${produto.nome}"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'sem-foto\\'><span>📷</span>Adicione a foto do produto</div>';"
             >
 
-                ${
-                    estoqueDisponivel <= 0
-                        ? "Estoque esgotado"
-                        : "+ Adicionar"
-                }
+        </div>
 
+
+        <div class="produto-info">
+
+            <h4>
+                ${produto.nome}
+            </h4>
+
+
+            <div class="produto-descricao">
+                ${produto.descricao}
+            </div>
+
+
+            <div class="produto-preco">
+                R$ ${produto.preco.toFixed(2).replace(".", ",")}
+            </div>
+
+
+            <div class="produto-estoque">
+                Estoque disponível: ${produto.estoque}
+            </div>
+
+
+            <button
+                class="btn-adicionar-produto"
+                onclick="adicionarProdutoCarrinho(${produto.id})"
+            >
+                🛒 Adicionar ao carrinho
             </button>
 
-        `;
+        </div>
+
+    `;
+
+    return card;
+}
+
+/* =========================================
+   MOSTRAR PRODUTOS NAS CATEGORIAS
+========================================= */
+
+function carregarProdutos() {
+
+    const categorias = {
+
+        limpeza: document.getElementById("carousel-limpeza"),
+
+        lavanderia: document.getElementById("carousel-lavanderia"),
+
+        acessorios: document.getElementById("carousel-acessorios"),
+
+        perfumacao: document.getElementById("carousel-perfumacao")
+
+    };
 
 
-        listaProdutos.appendChild(card);
+    // Limpa os carrosséis
+
+    Object.values(categorias).forEach(carousel => {
+
+        if (carousel) {
+            carousel.innerHTML = "";
+        }
+
+    });
+
+
+    // Coloca cada produto na categoria correta
+
+    produtos.forEach(produto => {
+
+        const carousel = categorias[produto.categoria];
+
+        if (carousel) {
+
+            carousel.appendChild(
+                criarCardProduto(produto)
+            );
+
+        }
+
+    });
+
+}
+/* =========================================
+   MOVER CARROSSEL
+========================================= */
+
+function moverCarrossel(id, direcao) {
+
+    const carousel = document.getElementById(id);
+
+    if (!carousel) return;
+
+
+    const distancia = 320;
+
+
+    carousel.scrollBy({
+
+        left: distancia * direcao,
+
+        behavior: "smooth"
 
     });
 
 }
 
+/* =========================================
+   PESQUISA
+========================================= */
 
-/* ==================================================
-   ADICIONAR AO CARRINHO
-================================================== */
+const campoPesquisa =
+    document.getElementById("pesquisaProdutos");
 
-function adicionarCarrinho(id) {
-
-    const produto =
-        produtos.find(
-            produto => produto.id === id
-        );
+const resultadoPesquisa =
+    document.getElementById("resultadoPesquisa");
 
 
-    if (!produto) {
-        return;
-    }
+campoPesquisa.addEventListener("input", function () {
+
+    const pesquisa =
+        this.value
+            .toLowerCase()
+            .trim();
 
 
-    const item =
-        carrinho.find(
-            item => item.id === id
-        );
+    // Se não estiver pesquisando
+    // volta para as categorias
 
+    if (pesquisa === "") {
 
-    /* VERIFICA ESTOQUE */
+        document.body.classList.remove("pesquisando");
 
-    if (item) {
+        resultadoPesquisa.innerHTML = "";
 
-        if (
-            item.quantidade >= produto.estoque
-        ) {
-
-            alert(
-                `Você já adicionou todo o estoque disponível de ${produto.nome}.`
-            );
-
-            return;
-
-        }
-
-
-        item.quantidade++;
-
-    } else {
-
-        carrinho.push({
-
-            id: produto.id,
-
-            quantidade: 1
-
-        });
-
-    }
-
-
-    salvarCarrinho();
-
-    atualizarTudo();
-
-}
-
-
-/* ==================================================
-   ALTERAR QUANTIDADE
-================================================== */
-
-function alterarQuantidade(id, alteracao) {
-
-    const item =
-        carrinho.find(
-            item => item.id === id
-        );
-
-
-    const produto =
-        produtos.find(
-            produto => produto.id === id
-        );
-
-
-    if (!item || !produto) {
-        return;
-    }
-
-
-    const novaQuantidade =
-        item.quantidade + alteracao;
-
-
-    /* NÃO PASSAR DO ESTOQUE */
-
-    if (
-        novaQuantidade > produto.estoque
-    ) {
-
-        alert(
-            `Só existem ${produto.estoque} unidade(s) de ${produto.nome} em estoque.`
-        );
+        resultadoPesquisa.classList.remove("ativo");
 
         return;
 
     }
 
 
-    /* SE CHEGAR A ZERO */
+    document.body.classList.add("pesquisando");
 
-    if (novaQuantidade <= 0) {
+    resultadoPesquisa.innerHTML = "";
 
-        removerCarrinho(id);
-
-        return;
-
-    }
+    resultadoPesquisa.classList.add("ativo");
 
 
-    item.quantidade =
-        novaQuantidade;
+    // Procura pelo nome,
+    // descrição ou categoria
 
+    const encontrados = produtos.filter(produto => {
 
-    salvarCarrinho();
+        return (
 
-    atualizarTudo();
+            produto.nome
+                .toLowerCase()
+                .includes(pesquisa)
 
-}
+            ||
 
+            produto.descricao
+                .toLowerCase()
+                .includes(pesquisa)
 
-/* ==================================================
-   REMOVER PRODUTO
-================================================== */
+            ||
 
-function removerCarrinho(id) {
+            produto.categoria
+                .toLowerCase()
+                .includes(pesquisa)
 
-    carrinho =
-        carrinho.filter(
-            item => item.id !== id
         );
 
-
-    salvarCarrinho();
-
-    atualizarTudo();
-
-}
+    });
 
 
-/* ==================================================
-   LIMPAR CARRINHO
-================================================== */
+    // Nenhum resultado
 
-function limparCarrinho() {
+    if (encontrados.length === 0) {
 
-    if (carrinho.length === 0) {
-        return;
-    }
+        resultadoPesquisa.innerHTML = `
 
+            <div class="sem-resultados">
 
-    const confirmar =
-        confirm(
-            "Tem certeza que deseja limpar o carrinho?"
-        );
+                🔎
 
-
-    if (!confirmar) {
-        return;
-    }
-
-
-    carrinho = [];
-
-    salvarCarrinho();
-
-    atualizarTudo();
-
-}
-
-
-/* ==================================================
-   MOSTRAR CARRINHO
-================================================== */
-
-function mostrarCarrinho() {
-
-    itensCarrinho.innerHTML = "";
-
-
-    if (carrinho.length === 0) {
-
-        itensCarrinho.innerHTML = `
-
-            <div class="carrinho-vazio">
-
-                🛒
-
-                <strong>
-                    Seu carrinho está vazio
-                </strong>
+                <h3>
+                    Produto não encontrado
+                </h3>
 
                 <p>
-                    Adicione alguns produtos para começar.
+                    Tente pesquisar por outro nome.
                 </p>
 
             </div>
@@ -631,410 +472,49 @@ function mostrarCarrinho() {
     }
 
 
-    carrinho.forEach(item => {
+    // Mostra resultados
 
-        const produto =
-            produtos.find(
-                produto => produto.id === item.id
-            );
+    encontrados.forEach(produto => {
 
-
-        if (!produto) {
-            return;
-        }
-
-
-        const subtotal =
-            produto.preco *
-            item.quantidade;
-
-
-        const elemento =
-            document.createElement("div");
-
-        elemento.className =
-            "item-carrinho";
-
-
-        elemento.innerHTML = `
-
-            <div class="item-icone">
-                ${produto.icone}
-            </div>
-
-            <div>
-
-                <h4>
-                    ${produto.nome}
-                </h4>
-
-                <span class="item-preco">
-                    ${formatarPreco(subtotal)}
-                </span>
-
-                <div class="quantidade">
-
-                    <button
-                        onclick="alterarQuantidade(${produto.id}, -1)"
-                    >
-                        −
-                    </button>
-
-                    <span>
-                        ${item.quantidade}
-                    </span>
-
-                    <button
-                        onclick="alterarQuantidade(${produto.id}, 1)"
-                    >
-                        +
-                    </button>
-
-                </div>
-
-            </div>
-
-            <button
-                class="remover"
-                onclick="removerCarrinho(${produto.id})"
-                title="Remover"
-            >
-                🗑️
-            </button>
-
-        `;
-
-
-        itensCarrinho.appendChild(elemento);
+        resultadoPesquisa.appendChild(
+            criarCardProduto(produto)
+        );
 
     });
 
-}
+});
 
+/* =========================================
+   ADICIONAR PRODUTO AO CARRINHO
+========================================= */
 
-/* ==================================================
-   TOTAL
-================================================== */
+function adicionarProdutoCarrinho(id) {
 
-function calcularTotal() {
-
-    return carrinho.reduce(
-        (total, item) => {
-
-            const produto =
-                produtos.find(
-                    produto => produto.id === item.id
-                );
-
-
-            if (!produto) {
-                return total;
-            }
-
-
-            return total +
-                produto.preco *
-                item.quantidade;
-
-        },
-        0
-    );
-
-}
-
-
-/* ==================================================
-   QUANTIDADE TOTAL
-================================================== */
-
-function calcularQuantidade() {
-
-    return carrinho.reduce(
-        (total, item) =>
-            total + item.quantidade,
-        0
-    );
-
-}
-
-
-/* ==================================================
-   ATUALIZAR TUDO
-================================================== */
-
-function atualizarTudo() {
-
-    mostrarProdutos();
-
-    mostrarCarrinho();
-
-
-    const total =
-        calcularTotal();
-
-
-    const quantidade =
-        calcularQuantidade();
-
-
-    totalCarrinho.textContent =
-        formatarPreco(total);
-
-
-    quantidadeCarrinho.textContent =
-        quantidade;
-
-
-    localStorage.setItem(
-        "carrinhoRC",
-        JSON.stringify(carrinho)
-    );
-
-}
-
-
-/* ==================================================
-   ABRIR CARRINHO
-================================================== */
-
-function abrirCarrinho() {
-
-    carrinhoElemento.classList.add(
-        "aberto"
-    );
-
-    fundoCarrinho.classList.add(
-        "aberto"
-    );
-
-    document.body.style.overflow =
-        "hidden";
-
-}
-
-
-/* ==================================================
-   FECHAR CARRINHO
-================================================== */
-
-function fecharCarrinho() {
-
-    carrinhoElemento.classList.remove(
-        "aberto"
-    );
-
-    fundoCarrinho.classList.remove(
-        "aberto"
-    );
-
-    document.body.style.overflow =
-        "";
-
-}
-
-
-/* ==================================================
-   BOTÕES DO CARRINHO
-================================================== */
-
-document
-    .getElementById("abrirCarrinho")
-    .addEventListener(
-        "click",
-        abrirCarrinho
-    );
-
-
-document
-    .getElementById("fecharCarrinho")
-    .addEventListener(
-        "click",
-        fecharCarrinho
-    );
-
-
-fundoCarrinho
-    .addEventListener(
-        "click",
-        fecharCarrinho
-    );
-
-
-document
-    .getElementById("limparCarrinho")
-    .addEventListener(
-        "click",
-        limparCarrinho
-    );
-
-
-/* ==================================================
-   PESQUISA
-================================================== */
-
-campoPesquisa.addEventListener(
-    "input",
-    function () {
-
-        const termo =
-            campoPesquisa.value
-                .toLowerCase()
-                .trim();
-
-
-        const resultado =
-            produtos.filter(
-                produto =>
-
-                    produto.nome
-                        .toLowerCase()
-                        .includes(termo)
-
-                    ||
-
-                    produto.categoria
-                        .toLowerCase()
-                        .includes(termo)
-
-                    ||
-
-                    produto.descricao
-                        .toLowerCase()
-                        .includes(termo)
-
-            );
-
-
-        mostrarProdutos(resultado);
-
-    }
-);
-
-
-/* ==================================================
-   WHATSAPP
-================================================== */
-
-document
-    .getElementById("enviarWhatsApp")
-    .addEventListener(
-        "click",
-        enviarWhatsApp
-    );
-
-
-function enviarWhatsApp() {
-
-    if (carrinho.length === 0) {
-
-        alert(
-            "Seu carrinho está vazio."
+    const produto =
+        produtos.find(
+            item => item.id === id
         );
 
+
+    if (!produto) {
         return;
-
     }
 
 
-    const nome =
-        document
-            .getElementById("nomeCliente")
-            .value
-            .trim();
+    /*
+       Usa a função do seu sistema
+       de carrinho.
+    */
 
-
-    const endereco =
-        document
-            .getElementById("enderecoCliente")
-            .value
-            .trim();
-
-
-    if (!nome) {
-
-        alert(
-            "Digite seu nome antes de enviar o pedido."
-        );
-
-        return;
-
-    }
-
-
-    let mensagem =
-        `Olá! Meu nome é ${nome}.%0A%0A`;
-
-    mensagem +=
-        `Gostaria de fazer este pedido:%0A%0A`;
-
-
-    carrinho.forEach(item => {
-
-        const produto =
-            produtos.find(
-                produto => produto.id === item.id
-            );
-
-
-        const subtotal =
-            produto.preco *
-            item.quantidade;
-
-
-        mensagem +=
-            `• ${produto.nome} - ${item.quantidade}x - ${formatarPreco(subtotal)}%0A`;
-
-    });
-
-
-    mensagem +=
-        `%0A*Total: ${formatarPreco(calcularTotal())}*`;
-
-
-    if (endereco) {
-
-        mensagem +=
-            `%0A%0AEndereço: ${endereco}`;
-
-    }
-
-
-    mensagem +=
-        `%0A%0AAguardo a confirmação. Obrigado!`;
-
-
-    const telefone =
-        "5511983184154";
-
-
-    const url =
-        `https://wa.me/${telefone}?text=${mensagem}`;
-
-
-    window.open(
-        url,
-        "_blank"
-    );
+    adicionarAoCarrinho(produto);
 
 }
+/* =========================================
+   INICIAR LOJA
+========================================= */
 
+document.addEventListener("DOMContentLoaded", () => {
 
-/* ==================================================
-   SALVAR CARRINHO
-================================================== */
+    carregarProdutos();
 
-function salvarCarrinho() {
-
-    localStorage.setItem(
-        "carrinhoRC",
-        JSON.stringify(carrinho)
-    );
-
-}
-
-
-/* ==================================================
-   INICIAR
-================================================== */
-
-atualizarTudo();
+});
