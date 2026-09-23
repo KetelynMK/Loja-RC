@@ -484,31 +484,521 @@ campoPesquisa.addEventListener("input", function () {
 
 });
 
-/* =========================================
-   ADICIONAR PRODUTO AO CARRINHO
-========================================= */
+/* =====================================================
+   CARRINHO
+===================================================== */
+
+let carrinho = JSON.parse(localStorage.getItem("carrinhoRC")) || [];
+
+
+/* =====================================================
+   SALVAR CARRINHO
+===================================================== */
+
+function salvarCarrinho() {
+    localStorage.setItem(
+        "carrinhoRC",
+        JSON.stringify(carrinho)
+    );
+}
+
+
+/* =====================================================
+   ADICIONAR PRODUTO
+===================================================== */
 
 function adicionarProdutoCarrinho(id) {
 
-    const produto =
-        produtos.find(
-            item => item.id === id
-        );
-
+    const produto = produtos.find(
+        item => item.id === id
+    );
 
     if (!produto) {
+        console.error("Produto não encontrado:", id);
         return;
     }
 
 
-    /*
-       Usa a função do seu sistema
-       de carrinho.
-    */
+    const produtoExistente = carrinho.find(
+        item => item.id === id
+    );
 
-    adicionarAoCarrinho(produto);
+
+    /* Se já existe no carrinho */
+
+    if (produtoExistente) {
+
+        if (
+            produtoExistente.quantidade >=
+            produto.estoque
+        ) {
+
+            alert(
+                `Você atingiu o limite de estoque de ${produto.nome}.`
+            );
+
+            return;
+        }
+
+
+        produtoExistente.quantidade++;
+
+    } else {
+
+        /* Produto novo */
+
+        carrinho.push({
+
+            id: produto.id,
+
+            nome: produto.nome,
+
+            preco: produto.preco,
+
+            estoque: produto.estoque,
+
+            quantidade: 1
+
+        });
+
+    }
+
+
+    salvarCarrinho();
+
+    atualizarCarrinho();
+
+    abrirCarrinho();
 
 }
+
+
+/* =====================================================
+   AUMENTAR QUANTIDADE
+===================================================== */
+
+function aumentarQuantidade(id) {
+
+    const item = carrinho.find(
+        produto => produto.id === id
+    );
+
+    if (!item) return;
+
+
+    if (item.quantidade >= item.estoque) {
+
+        alert(
+            `Não há mais unidades disponíveis de ${item.nome}.`
+        );
+
+        return;
+    }
+
+
+    item.quantidade++;
+
+    salvarCarrinho();
+
+    atualizarCarrinho();
+}
+
+
+/* =====================================================
+   DIMINUIR QUANTIDADE
+===================================================== */
+
+function diminuirQuantidade(id) {
+
+    const item = carrinho.find(
+        produto => produto.id === id
+    );
+
+    if (!item) return;
+
+
+    if (item.quantidade > 1) {
+
+        item.quantidade--;
+
+    } else {
+
+        removerDoCarrinho(id);
+
+        return;
+    }
+
+
+    salvarCarrinho();
+
+    atualizarCarrinho();
+}
+
+
+/* =====================================================
+   REMOVER PRODUTO
+===================================================== */
+
+function removerDoCarrinho(id) {
+
+    carrinho = carrinho.filter(
+        produto => produto.id !== id
+    );
+
+
+    salvarCarrinho();
+
+    atualizarCarrinho();
+}
+
+
+/* =====================================================
+   LIMPAR CARRINHO
+===================================================== */
+
+function limparCarrinho() {
+
+    if (carrinho.length === 0) {
+        return;
+    }
+
+
+    const confirmar = confirm(
+        "Deseja realmente limpar o carrinho?"
+    );
+
+
+    if (!confirmar) {
+        return;
+    }
+
+
+    carrinho = [];
+
+    salvarCarrinho();
+
+    atualizarCarrinho();
+}
+
+
+/* =====================================================
+   ATUALIZAR CARRINHO
+===================================================== */
+
+function atualizarCarrinho() {
+
+    const listaCarrinho =
+        document.querySelector("#listaCarrinho");
+
+    const totalCarrinho =
+        document.querySelector("#totalCarrinho");
+
+    const contadorCarrinho =
+        document.querySelector("#contadorCarrinho");
+
+
+    /* -----------------------------------------------
+       QUANTIDADE TOTAL
+    ------------------------------------------------ */
+
+    const quantidadeTotal =
+        carrinho.reduce(
+            (total, item) =>
+                total + item.quantidade,
+            0
+        );
+
+
+    /* Atualiza número do botão */
+
+    if (contadorCarrinho) {
+
+        contadorCarrinho.textContent =
+            quantidadeTotal;
+
+    }
+
+
+    /* -----------------------------------------------
+       TOTAL
+    ------------------------------------------------ */
+
+    const total =
+        carrinho.reduce(
+            (valor, item) =>
+                valor +
+                (item.preco * item.quantidade),
+            0
+        );
+
+
+    if (totalCarrinho) {
+
+        totalCarrinho.textContent =
+            formatarPreco(total);
+
+    }
+
+
+    /* -----------------------------------------------
+       CARRINHO VAZIO
+    ------------------------------------------------ */
+
+    if (!listaCarrinho) {
+        return;
+    }
+
+
+    if (carrinho.length === 0) {
+
+        listaCarrinho.innerHTML = `
+
+            <div class="carrinho-vazio">
+
+                <div class="carrinho-vazio-icone">
+                    🛒
+                </div>
+
+                <h3>
+                    Seu carrinho está vazio
+                </h3>
+
+                <p>
+                    Escolha alguns produtos para começar.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    /* -----------------------------------------------
+       PRODUTOS
+    ------------------------------------------------ */
+
+    listaCarrinho.innerHTML = "";
+
+
+    carrinho.forEach(item => {
+
+        const subtotal =
+            item.preco * item.quantidade;
+
+
+        const produtoCarrinho =
+            document.createElement("div");
+
+
+        produtoCarrinho.className =
+            "item-carrinho";
+
+
+        produtoCarrinho.innerHTML = `
+
+            <div class="item-carrinho-info">
+
+                <h4>
+                    ${item.nome}
+                </h4>
+
+                <span>
+                    ${formatarPreco(item.preco)}
+                    cada
+                </span>
+
+            </div>
+
+
+            <div class="item-carrinho-controle">
+
+                <button
+                    type="button"
+                    onclick="diminuirQuantidade(${item.id})"
+                >
+                    −
+                </button>
+
+
+                <strong>
+                    ${item.quantidade}
+                </strong>
+
+
+                <button
+                    type="button"
+                    onclick="aumentarQuantidade(${item.id})"
+                >
+                    +
+                </button>
+
+            </div>
+
+
+            <div class="item-carrinho-subtotal">
+
+                <strong>
+                    ${formatarPreco(subtotal)}
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="btn-remover-item"
+                onclick="removerDoCarrinho(${item.id})"
+                title="Remover produto"
+            >
+                🗑️
+            </button>
+
+        `;
+
+
+        listaCarrinho.appendChild(
+            produtoCarrinho
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+   FORMATAR PREÇO
+===================================================== */
+
+function formatarPreco(valor) {
+
+    return valor.toLocaleString(
+        "pt-BR",
+        {
+            style: "currency",
+            currency: "BRL"
+        }
+    );
+
+}
+
+
+/* =====================================================
+   ABRIR CARRINHO
+===================================================== */
+
+function abrirCarrinho() {
+
+    const carrinhoModal =
+        document.querySelector("#carrinhoModal");
+
+
+    if (!carrinhoModal) {
+        return;
+    }
+
+
+    carrinhoModal.classList.add("ativo");
+
+    document.body.classList.add(
+        "carrinho-aberto"
+    );
+
+}
+
+
+/* =====================================================
+   FECHAR CARRINHO
+===================================================== */
+
+function fecharCarrinho() {
+
+    const carrinhoModal =
+        document.querySelector("#carrinhoModal");
+
+
+    if (!carrinhoModal) {
+        return;
+    }
+
+
+    carrinhoModal.classList.remove("ativo");
+
+    document.body.classList.remove(
+        "carrinho-aberto"
+    );
+
+}
+
+
+/* =====================================================
+   BOTÃO DO CARRINHO
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        atualizarCarrinho();
+
+
+        const botaoCarrinho =
+            document.querySelector("#botaoCarrinho");
+
+
+        if (botaoCarrinho) {
+
+            botaoCarrinho.addEventListener(
+                "click",
+                abrirCarrinho
+            );
+
+        }
+
+
+        const botaoFechar =
+            document.querySelector("#fecharCarrinho");
+
+
+        if (botaoFechar) {
+
+            botaoFechar.addEventListener(
+                "click",
+                fecharCarrinho
+            );
+
+        }
+
+
+        /* Fecha clicando fora */
+
+        const carrinhoModal =
+            document.querySelector("#carrinhoModal");
+
+
+        if (carrinhoModal) {
+
+            carrinhoModal.addEventListener(
+                "click",
+                event => {
+
+                    if (
+                        event.target ===
+                        carrinhoModal
+                    ) {
+
+                        fecharCarrinho();
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
 /* =========================================
    INICIAR LOJA
 ========================================= */
