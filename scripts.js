@@ -1,559 +1,1040 @@
-// ============================================================
-// RC PRODUTOS DE LIMPEZA
-// JavaScript do catálogo, carrinho e pedidos pelo WhatsApp
-// ============================================================
+/* ==================================================
+   PRODUTOS
+================================================== */
 
-// Número do WhatsApp que receberá os pedidos
-const WHATSAPP = "5511983184154";
+const produtos = [
 
-// ============================================================
-// PRODUTOS
-// Edite os preços e informações aqui.
-// ============================================================
+    {
+        id: 1,
+        nome: "Sabão líquido",
+        categoria: "Limpeza",
+        descricao: "Azul / Verde / Cereja / Branca / Erva-doce",
+        preco: 14.40,
+        estoque: 10,
+        icone: "🧴"
+    },
 
-const products = [
-  {
-    id: 1,
-    name: "Detergente",
-    category: "Detergentes",
-    price: 0.00,
-    unit: "500 ml",
-    emoji: "🧴",
-    desc: "Limpeza e praticidade para o dia a dia."
-  },
+    {
+        id: 2,
+        nome: "Água sanitária 5L",
+        categoria: "Limpeza",
+        descricao: "Para limpeza geral",
+        preco: 9.60,
+        estoque: 10,
+        icone: "💧"
+    },
 
-  {
-    id: 2,
-    name: "Amaciante",
-    category: "Amaciantes",
-    price: 0.00,
-    unit: "2 L",
-    emoji: "🌸",
-    desc: "Perfume agradável e cuidado para as roupas."
-  },
+    {
+        id: 3,
+        nome: "Cloro",
+        categoria: "Limpeza",
+        descricao: "Produto para limpeza",
+        preco: 16.20,
+        estoque: 10,
+        icone: "🧪"
+    },
 
-  {
-    id: 3,
-    name: "Desinfetante",
-    category: "Desinfetantes",
-    price: 0.00,
-    unit: "2 L",
-    emoji: "🫧",
-    desc: "Para uma limpeza completa dos ambientes."
-  },
+    {
+        id: 4,
+        nome: "Cloro 5L",
+        categoria: "Limpeza",
+        descricao: "Embalagem econômica",
+        preco: 32.00,
+        estoque: 8,
+        icone: "🧪"
+    },
 
-  {
-    id: 4,
-    name: "Cloro Gel",
-    category: "Cloro",
-    price: 0.00,
-    unit: "500 g",
-    emoji: "🧼",
-    desc: "Prático para limpeza pesada."
-  },
+    {
+        id: 5,
+        nome: "Limpador perfumado roxo",
+        categoria: "Perfumado",
+        descricao: "Perfume agradável para sua casa",
+        preco: 17.60,
+        estoque: 8,
+        icone: "🌸"
+    },
 
-  {
-    id: 5,
-    name: "Percarbonato",
-    category: "Limpeza",
-    price: 0.00,
-    unit: "500 g",
-    emoji: "✨",
-    desc: "Auxilia na limpeza e remoção de manchas."
-  },
+    {
+        id: 6,
+        nome: "Pinho",
+        categoria: "Limpeza",
+        descricao: "Limpador para sua casa",
+        preco: 14.40,
+        estoque: 10,
+        icone: "🧴"
+    },
 
-  {
-    id: 6,
-    name: "Sabão Líquido",
-    category: "Lavanderia",
-    price: 0.00,
-    unit: "2 L",
-    emoji: "🧺",
-    desc: "Limpeza eficiente para suas roupas."
-  },
+    {
+        id: 7,
+        nome: "Pereirão",
+        categoria: "Limpeza",
+        descricao: "Produto para limpeza pesada",
+        preco: 23.20,
+        estoque: 6,
+        icone: "🧹"
+    },
 
-  {
-    id: 7,
-    name: "Multiuso",
-    category: "Limpeza",
-    price: 0.00,
-    unit: "500 ml",
-    emoji: "💧",
-    desc: "Versátil para diversas superfícies."
-  },
+    {
+        id: 8,
+        nome: "Sabão querosene",
+        categoria: "Limpeza",
+        descricao: "Para limpeza geral",
+        preco: 18.40,
+        estoque: 7,
+        icone: "🧼"
+    },
 
-  {
-    id: 8,
-    name: "Limpa-vidros",
-    category: "Limpeza",
-    price: 0.00,
-    unit: "500 ml",
-    emoji: "🪟",
-    desc: "Ajuda a deixar os vidros limpos e brilhantes."
-  }
+    {
+        id: 9,
+        nome: "Sabão líquido azul 5L",
+        categoria: "Econômico",
+        descricao: "Embalagem de 5 litros",
+        preco: 25.50,
+        estoque: 5,
+        icone: "🧴"
+    },
+
+    {
+        id: 10,
+        nome: "Detergente neutro / coco",
+        categoria: "Detergente",
+        descricao: "Para louças e limpeza",
+        preco: 12.00,
+        estoque: 15,
+        icone: "🧴"
+    },
+
+    {
+        id: 11,
+        nome: "Pequeno",
+        categoria: "Limpeza",
+        descricao: "Produto de limpeza",
+        preco: 3.00,
+        estoque: 20,
+        icone: "🧴"
+    },
+
+    {
+        id: 12,
+        nome: "Vernonez",
+        categoria: "Limpeza",
+        descricao: "Produto para limpeza",
+        preco: 9.60,
+        estoque: 10,
+        icone: "🧴"
+    },
+
+    {
+        id: 13,
+        nome: "Limpador com coco",
+        categoria: "Limpeza",
+        descricao: "Para limpeza da casa",
+        preco: 6.40,
+        estoque: 10,
+        icone: "🧽"
+    },
+
+    {
+        id: 14,
+        nome: "Tira manchas",
+        categoria: "Limpeza",
+        descricao: "Ajuda na remoção de manchas",
+        preco: 16.40,
+        estoque: 7,
+        icone: "✨"
+    },
+
+    {
+        id: 15,
+        nome: "Cheirinho",
+        categoria: "Perfumação",
+        descricao: "Perfume para ambientes",
+        preco: 14.40,
+        estoque: 10,
+        icone: "🌺"
+    },
+
+    {
+        id: 16,
+        nome: "Borrifador",
+        categoria: "Acessórios",
+        descricao: "Ideal para produtos de limpeza",
+        preco: 18.40,
+        estoque: 8,
+        icone: "🧴"
+    },
+
+    {
+        id: 17,
+        nome: "Lustra móveis",
+        categoria: "Móveis",
+        descricao: "Para móveis",
+        preco: 10.40,
+        estoque: 8,
+        icone: "🪑"
+    },
+
+    {
+        id: 18,
+        nome: "Limpa alumínio",
+        categoria: "Limpeza",
+        descricao: "Para limpeza de alumínio",
+        preco: 7.40,
+        estoque: 10,
+        icone: "✨"
+    },
+
+    {
+        id: 19,
+        nome: "Sabão em pedra",
+        categoria: "Sabão",
+        descricao: "Para limpeza",
+        preco: 4.00,
+        estoque: 20,
+        icone: "🧼"
+    },
+
+    {
+        id: 20,
+        nome: "Limpa vidro",
+        categoria: "Vidros",
+        descricao: "Para vidros e superfícies",
+        preco: 14.40,
+        estoque: 8,
+        icone: "🪟"
+    },
+
+    {
+        id: 21,
+        nome: "Pano de chão",
+        categoria: "Acessórios",
+        descricao: "Para limpeza doméstica",
+        preco: 3.00,
+        estoque: 20,
+        icone: "🧹"
+    },
+
+    {
+        id: 22,
+        nome: "Álcool azul / rosa / verde",
+        categoria: "Limpeza",
+        descricao: "Opções de cores",
+        preco: 9.60,
+        estoque: 12,
+        icone: "🧴"
+    },
+
+    {
+        id: 23,
+        nome: "Multiuso verde",
+        categoria: "Multiuso",
+        descricao: "Para diversas superfícies",
+        preco: 13.60,
+        estoque: 10,
+        icone: "🧴"
+    },
+
+    {
+        id: 24,
+        nome: "Ricardo",
+        categoria: "Limpeza",
+        descricao: "Produto de limpeza",
+        preco: 13.60,
+        estoque: 10,
+        icone: "🧴"
+    },
+
+    {
+        id: 25,
+        nome: "Amaciante",
+        categoria: "Limpeza",
+        descricao: "Para deixar as roupas perfumadas",
+        preco: 10.40,
+        estoque: 12,
+        icone: "🧴"
+    },
+
+    {
+        id: 26,
+        nome: "Pequeno verde",
+        categoria: "Limpeza",
+        descricao: "Produto de limpeza",
+        preco: 4.25,
+        estoque: 15,
+        icone: "🧴"
+    }
+
 ];
 
 
-// ============================================================
-// VARIÁVEIS
-// ============================================================
+/* ==================================================
+   CARRINHO
+================================================== */
 
-let cart = {};
-let activeCategory = "Todos";
-
-
-// ============================================================
-// FORMATAÇÃO DE DINHEIRO
-// ============================================================
-
-const money = value => {
-  return value.toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL"
-  });
-};
+let carrinho = JSON.parse(
+    localStorage.getItem("carrinhoRC")
+) || [];
 
 
-// ============================================================
-// CATEGORIAS
-// ============================================================
+/* ==================================================
+   ELEMENTOS
+================================================== */
 
-function renderCategories() {
+const listaProdutos =
+    document.getElementById("listaProdutos");
 
-  const categories = [
-    "Todos",
-    ...new Set(products.map(product => product.category))
-  ];
+const itensCarrinho =
+    document.getElementById("itensCarrinho");
 
-  document.getElementById("categories").innerHTML =
-    categories.map(category => `
-      <button
-        class="category ${category === activeCategory ? "active" : ""}"
-        data-category="${category}"
-      >
-        ${category}
-      </button>
-    `).join("");
+const totalCarrinho =
+    document.getElementById("totalCarrinho");
 
-  document.querySelectorAll(".category").forEach(button => {
+const quantidadeCarrinho =
+    document.getElementById("quantidadeCarrinho");
 
-    button.addEventListener("click", () => {
+const carrinhoElemento =
+    document.getElementById("carrinho");
 
-      activeCategory = button.dataset.category;
+const fundoCarrinho =
+    document.getElementById("fundoCarrinho");
 
-      renderCategories();
-      renderProducts();
+const campoPesquisa =
+    document.getElementById("campoPesquisa");
+
+const semProdutos =
+    document.getElementById("semProdutos");
+
+
+/* ==================================================
+   FORMATAÇÃO DE DINHEIRO
+================================================== */
+
+function formatarPreco(valor) {
+
+    return valor.toLocaleString(
+        "pt-BR",
+        {
+            style: "currency",
+            currency: "BRL"
+        }
+    );
+
+}
+
+
+/* ==================================================
+   MOSTRAR PRODUTOS
+================================================== */
+
+function mostrarProdutos(lista = produtos) {
+
+    listaProdutos.innerHTML = "";
+
+
+    if (lista.length === 0) {
+
+        semProdutos.style.display = "block";
+
+        return;
+
+    }
+
+
+    semProdutos.style.display = "none";
+
+
+    lista.forEach(produto => {
+
+        const itemNoCarrinho =
+            carrinho.find(
+                item => item.id === produto.id
+            );
+
+
+        const quantidadeAtual =
+            itemNoCarrinho
+                ? itemNoCarrinho.quantidade
+                : 0;
+
+
+        const estoqueDisponivel =
+            produto.estoque - quantidadeAtual;
+
+
+        const card =
+            document.createElement("article");
+
+        card.className = "produto";
+
+
+        card.innerHTML = `
+
+            <div class="produto-imagem">
+                ${produto.icone}
+            </div>
+
+            <span class="produto-categoria">
+                ${produto.categoria}
+            </span>
+
+            <h3>
+                ${produto.nome}
+            </h3>
+
+            <p>
+                ${produto.descricao}
+            </p>
+
+            <div class="estoque">
+                Disponível:
+                <strong>
+                    ${estoqueDisponivel}
+                </strong>
+                unidade(s)
+            </div>
+
+            <strong class="preco">
+                ${formatarPreco(produto.preco)}
+            </strong>
+
+            <button
+                class="btn-adicionar"
+                onclick="adicionarCarrinho(${produto.id})"
+                ${estoqueDisponivel <= 0 ? "disabled" : ""}
+            >
+
+                ${
+                    estoqueDisponivel <= 0
+                        ? "Estoque esgotado"
+                        : "+ Adicionar"
+                }
+
+            </button>
+
+        `;
+
+
+        listaProdutos.appendChild(card);
 
     });
 
-  });
+}
+
+
+/* ==================================================
+   ADICIONAR AO CARRINHO
+================================================== */
+
+function adicionarCarrinho(id) {
+
+    const produto =
+        produtos.find(
+            produto => produto.id === id
+        );
+
+
+    if (!produto) {
+        return;
+    }
+
+
+    const item =
+        carrinho.find(
+            item => item.id === id
+        );
+
+
+    /* VERIFICA ESTOQUE */
+
+    if (item) {
+
+        if (
+            item.quantidade >= produto.estoque
+        ) {
+
+            alert(
+                `Você já adicionou todo o estoque disponível de ${produto.nome}.`
+            );
+
+            return;
+
+        }
+
+
+        item.quantidade++;
+
+    } else {
+
+        carrinho.push({
+
+            id: produto.id,
+
+            quantidade: 1
+
+        });
+
+    }
+
+
+    salvarCarrinho();
+
+    atualizarTudo();
 
 }
 
 
-// ============================================================
-// PRODUTOS
-// ============================================================
+/* ==================================================
+   ALTERAR QUANTIDADE
+================================================== */
 
-function renderProducts() {
+function alterarQuantidade(id, alteracao) {
 
-  const search =
-    document
-      .getElementById("search")
-      .value
-      .trim()
-      .toLowerCase();
-
-  const list = products.filter(product => {
-
-    const categoryOK =
-      activeCategory === "Todos" ||
-      product.category === activeCategory;
-
-    const searchOK =
-      !search ||
-      `${product.name} ${product.category} ${product.desc}`
-        .toLowerCase()
-        .includes(search);
-
-    return categoryOK && searchOK;
-
-  });
+    const item =
+        carrinho.find(
+            item => item.id === id
+        );
 
 
-  const grid = document.getElementById("productGrid");
+    const produto =
+        produtos.find(
+            produto => produto.id === id
+        );
 
-  document.getElementById("emptyState").hidden =
-    list.length > 0;
+
+    if (!item || !produto) {
+        return;
+    }
 
 
-  grid.innerHTML = list.map(product => `
+    const novaQuantidade =
+        item.quantidade + alteracao;
 
-    <article class="product-card">
 
-      <div class="product-image">
-        ${product.emoji}
-      </div>
+    /* NÃO PASSAR DO ESTOQUE */
 
-      <div class="product-body">
+    if (
+        novaQuantidade > produto.estoque
+    ) {
 
-        <span class="product-cat">
-          ${product.category.toUpperCase()}
-        </span>
+        alert(
+            `Só existem ${produto.estoque} unidade(s) de ${produto.nome} em estoque.`
+        );
 
-        <h3 class="product-name">
-          ${product.name}
-        </h3>
+        return;
 
-        <div class="product-desc">
-          ${product.unit} · ${product.desc}
-        </div>
+    }
 
-        <div class="product-bottom">
 
-          <span class="price">
+    /* SE CHEGAR A ZERO */
 
-            ${
-              product.price > 0
-                ? money(product.price)
-                : "Consultar preço"
+    if (novaQuantidade <= 0) {
+
+        removerCarrinho(id);
+
+        return;
+
+    }
+
+
+    item.quantidade =
+        novaQuantidade;
+
+
+    salvarCarrinho();
+
+    atualizarTudo();
+
+}
+
+
+/* ==================================================
+   REMOVER PRODUTO
+================================================== */
+
+function removerCarrinho(id) {
+
+    carrinho =
+        carrinho.filter(
+            item => item.id !== id
+        );
+
+
+    salvarCarrinho();
+
+    atualizarTudo();
+
+}
+
+
+/* ==================================================
+   LIMPAR CARRINHO
+================================================== */
+
+function limparCarrinho() {
+
+    if (carrinho.length === 0) {
+        return;
+    }
+
+
+    const confirmar =
+        confirm(
+            "Tem certeza que deseja limpar o carrinho?"
+        );
+
+
+    if (!confirmar) {
+        return;
+    }
+
+
+    carrinho = [];
+
+    salvarCarrinho();
+
+    atualizarTudo();
+
+}
+
+
+/* ==================================================
+   MOSTRAR CARRINHO
+================================================== */
+
+function mostrarCarrinho() {
+
+    itensCarrinho.innerHTML = "";
+
+
+    if (carrinho.length === 0) {
+
+        itensCarrinho.innerHTML = `
+
+            <div class="carrinho-vazio">
+
+                🛒
+
+                <strong>
+                    Seu carrinho está vazio
+                </strong>
+
+                <p>
+                    Adicione alguns produtos para começar.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    carrinho.forEach(item => {
+
+        const produto =
+            produtos.find(
+                produto => produto.id === item.id
+            );
+
+
+        if (!produto) {
+            return;
+        }
+
+
+        const subtotal =
+            produto.preco *
+            item.quantidade;
+
+
+        const elemento =
+            document.createElement("div");
+
+        elemento.className =
+            "item-carrinho";
+
+
+        elemento.innerHTML = `
+
+            <div class="item-icone">
+                ${produto.icone}
+            </div>
+
+            <div>
+
+                <h4>
+                    ${produto.nome}
+                </h4>
+
+                <span class="item-preco">
+                    ${formatarPreco(subtotal)}
+                </span>
+
+                <div class="quantidade">
+
+                    <button
+                        onclick="alterarQuantidade(${produto.id}, -1)"
+                    >
+                        −
+                    </button>
+
+                    <span>
+                        ${item.quantidade}
+                    </span>
+
+                    <button
+                        onclick="alterarQuantidade(${produto.id}, 1)"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button
+                class="remover"
+                onclick="removerCarrinho(${produto.id})"
+                title="Remover"
+            >
+                🗑️
+            </button>
+
+        `;
+
+
+        itensCarrinho.appendChild(elemento);
+
+    });
+
+}
+
+
+/* ==================================================
+   TOTAL
+================================================== */
+
+function calcularTotal() {
+
+    return carrinho.reduce(
+        (total, item) => {
+
+            const produto =
+                produtos.find(
+                    produto => produto.id === item.id
+                );
+
+
+            if (!produto) {
+                return total;
             }
 
-          </span>
 
-          <button
-            class="add"
-            onclick="addToCart(${product.id})"
-          >
-            + Adicionar
-          </button>
+            return total +
+                produto.preco *
+                item.quantidade;
 
-        </div>
-
-      </div>
-
-    </article>
-
-  `).join("");
+        },
+        0
+    );
 
 }
 
 
-// ============================================================
-// ADICIONAR AO CARRINHO
-// ============================================================
+/* ==================================================
+   QUANTIDADE TOTAL
+================================================== */
 
-function addToCart(id) {
+function calcularQuantidade() {
 
-  cart[id] = (cart[id] || 0) + 1;
-
-  renderCart();
-
-  showToast("Produto adicionado ao pedido");
-
-}
-
-
-// ============================================================
-// ALTERAR QUANTIDADE
-// ============================================================
-
-function changeQty(id, amount) {
-
-  cart[id] = (cart[id] || 0) + amount;
-
-  if (cart[id] <= 0) {
-    delete cart[id];
-  }
-
-  renderCart();
+    return carrinho.reduce(
+        (total, item) =>
+            total + item.quantidade,
+        0
+    );
 
 }
 
 
-// ============================================================
-// RENDERIZAR CARRINHO
-// ============================================================
+/* ==================================================
+   ATUALIZAR TUDO
+================================================== */
 
-function renderCart() {
+function atualizarTudo() {
 
-  const entries = Object.entries(cart);
+    mostrarProdutos();
 
-  const items = document.getElementById("cartItems");
-
-  const empty = document.getElementById("cartEmpty");
-
-  let total = 0;
-
-  let count = 0;
+    mostrarCarrinho();
 
 
-  items.innerHTML = entries.map(([id, quantity]) => {
-
-    const product =
-      products.find(item => item.id === Number(id));
-
-    total += product.price * quantity;
-
-    count += quantity;
+    const total =
+        calcularTotal();
 
 
-    return `
-
-      <div class="cart-row">
-
-        <div>
-
-          <strong>
-            ${product.name}
-          </strong>
-
-          <small>
-
-            ${
-              product.price > 0
-                ? `${money(product.price)} cada`
-                : "Preço a confirmar"
-            }
-
-          </small>
-
-        </div>
+    const quantidade =
+        calcularQuantidade();
 
 
-        <div class="qty">
-
-          <button
-            onclick="changeQty(${product.id}, -1)"
-          >
-            −
-          </button>
-
-          <span>
-            ${quantity}
-          </span>
-
-          <button
-            onclick="changeQty(${product.id}, 1)"
-          >
-            +
-          </button>
-
-        </div>
-
-      </div>
-
-    `;
-
-  }).join("");
+    totalCarrinho.textContent =
+        formatarPreco(total);
 
 
-  empty.style.display =
-    entries.length ? "none" : "block";
+    quantidadeCarrinho.textContent =
+        quantidade;
 
 
-  document.getElementById("cartCount").textContent =
-    count;
-
-
-  document.getElementById("cartTotal").textContent =
-    total > 0
-      ? money(total)
-      : "A confirmar";
+    localStorage.setItem(
+        "carrinhoRC",
+        JSON.stringify(carrinho)
+    );
 
 }
 
 
-// ============================================================
-// ABRIR CARRINHO
-// ============================================================
+/* ==================================================
+   ABRIR CARRINHO
+================================================== */
 
-function openCart() {
+function abrirCarrinho() {
 
-  document
-    .getElementById("cart")
-    .classList.add("open");
+    carrinhoElemento.classList.add(
+        "aberto"
+    );
 
-  document
-    .getElementById("cartOverlay")
-    .classList.add("open");
+    fundoCarrinho.classList.add(
+        "aberto"
+    );
 
-}
-
-
-// ============================================================
-// FECHAR CARRINHO
-// ============================================================
-
-function closeCart() {
-
-  document
-    .getElementById("cart")
-    .classList.remove("open");
-
-  document
-    .getElementById("cartOverlay")
-    .classList.remove("open");
+    document.body.style.overflow =
+        "hidden";
 
 }
 
 
-// ============================================================
-// AVISO NA TELA
-// ============================================================
+/* ==================================================
+   FECHAR CARRINHO
+================================================== */
 
-function showToast(message) {
+function fecharCarrinho() {
 
-  const toast =
-    document.getElementById("toast");
+    carrinhoElemento.classList.remove(
+        "aberto"
+    );
 
-  toast.textContent = message;
+    fundoCarrinho.classList.remove(
+        "aberto"
+    );
 
-  toast.classList.add("show");
-
-
-  setTimeout(() => {
-
-    toast.classList.remove("show");
-
-  }, 1800);
+    document.body.style.overflow =
+        "";
 
 }
 
 
-// ============================================================
-// ENVIAR PEDIDO PELO WHATSAPP
-// ============================================================
-
-function sendWhatsAppOrder() {
-
-  const entries = Object.entries(cart);
-
-
-  if (!entries.length) {
-
-    showToast("Adicione pelo menos um produto");
-
-    return;
-
-  }
-
-
-  const name =
-    document
-      .getElementById("customerName")
-      .value
-      .trim();
-
-
-  const address =
-    document
-      .getElementById("customerAddress")
-      .value
-      .trim();
-
-
-  let total = 0;
-
-
-  const lines = entries.map(([id, quantity]) => {
-
-    const product =
-      products.find(item => item.id === Number(id));
-
-
-    total += product.price * quantity;
-
-
-    return `• ${quantity}x ${product.name} (${product.unit}) - ${
-      product.price > 0
-        ? money(product.price * quantity)
-        : "preço a confirmar"
-    }`;
-
-  });
-
-
-  const message = [
-
-    "Olá! Gostaria de fazer um pedido na RC Produtos de Limpeza.",
-
-    "",
-
-    name
-      ? `Nome: ${name}`
-      : "",
-
-    address
-      ? `Endereço: ${address}`
-      : "",
-
-    "",
-
-    "Produtos:",
-
-    ...lines,
-
-    "",
-
-    `Total: ${
-      total > 0
-        ? money(total)
-        : "a confirmar"
-    }`,
-
-    "",
-
-    "Aguardo a confirmação do pedido. Obrigado!"
-
-  ]
-  .filter(Boolean)
-  .join("\n");
-
-
-  window.open(
-    `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,
-    "_blank"
-  );
-
-}
-
-
-// ============================================================
-// EVENTOS
-// ============================================================
+/* ==================================================
+   BOTÕES DO CARRINHO
+================================================== */
 
 document
-  .getElementById("search")
-  .addEventListener("input", renderProducts);
+    .getElementById("abrirCarrinho")
+    .addEventListener(
+        "click",
+        abrirCarrinho
+    );
 
 
 document
-  .getElementById("openCart")
-  .addEventListener("click", openCart);
+    .getElementById("fecharCarrinho")
+    .addEventListener(
+        "click",
+        fecharCarrinho
+    );
+
+
+fundoCarrinho
+    .addEventListener(
+        "click",
+        fecharCarrinho
+    );
 
 
 document
-  .getElementById("closeCart")
-  .addEventListener("click", closeCart);
+    .getElementById("limparCarrinho")
+    .addEventListener(
+        "click",
+        limparCarrinho
+    );
 
+
+/* ==================================================
+   PESQUISA
+================================================== */
+
+campoPesquisa.addEventListener(
+    "input",
+    function () {
+
+        const termo =
+            campoPesquisa.value
+                .toLowerCase()
+                .trim();
+
+
+        const resultado =
+            produtos.filter(
+                produto =>
+
+                    produto.nome
+                        .toLowerCase()
+                        .includes(termo)
+
+                    ||
+
+                    produto.categoria
+                        .toLowerCase()
+                        .includes(termo)
+
+                    ||
+
+                    produto.descricao
+                        .toLowerCase()
+                        .includes(termo)
+
+            );
+
+
+        mostrarProdutos(resultado);
+
+    }
+);
+
+
+/* ==================================================
+   WHATSAPP
+================================================== */
 
 document
-  .getElementById("cartOverlay")
-  .addEventListener("click", closeCart);
+    .getElementById("enviarWhatsApp")
+    .addEventListener(
+        "click",
+        enviarWhatsApp
+    );
 
 
-document
-  .getElementById("whatsappOrder")
-  .addEventListener("click", sendWhatsAppOrder);
+function enviarWhatsApp() {
+
+    if (carrinho.length === 0) {
+
+        alert(
+            "Seu carrinho está vazio."
+        );
+
+        return;
+
+    }
 
 
-// ============================================================
-// INICIALIZAÇÃO
-// ============================================================
+    const nome =
+        document
+            .getElementById("nomeCliente")
+            .value
+            .trim();
 
-renderCategories();
 
-renderProducts();
+    const endereco =
+        document
+            .getElementById("enderecoCliente")
+            .value
+            .trim();
 
-renderCart();
+
+    if (!nome) {
+
+        alert(
+            "Digite seu nome antes de enviar o pedido."
+        );
+
+        return;
+
+    }
+
+
+    let mensagem =
+        `Olá! Meu nome é ${nome}.%0A%0A`;
+
+    mensagem +=
+        `Gostaria de fazer este pedido:%0A%0A`;
+
+
+    carrinho.forEach(item => {
+
+        const produto =
+            produtos.find(
+                produto => produto.id === item.id
+            );
+
+
+        const subtotal =
+            produto.preco *
+            item.quantidade;
+
+
+        mensagem +=
+            `• ${produto.nome} - ${item.quantidade}x - ${formatarPreco(subtotal)}%0A`;
+
+    });
+
+
+    mensagem +=
+        `%0A*Total: ${formatarPreco(calcularTotal())}*`;
+
+
+    if (endereco) {
+
+        mensagem +=
+            `%0A%0AEndereço: ${endereco}`;
+
+    }
+
+
+    mensagem +=
+        `%0A%0AAguardo a confirmação. Obrigado!`;
+
+
+    const telefone =
+        "5511983184154";
+
+
+    const url =
+        `https://wa.me/${telefone}?text=${mensagem}`;
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* ==================================================
+   SALVAR CARRINHO
+================================================== */
+
+function salvarCarrinho() {
+
+    localStorage.setItem(
+        "carrinhoRC",
+        JSON.stringify(carrinho)
+    );
+
+}
+
+
+/* ==================================================
+   INICIAR
+================================================== */
+
+atualizarTudo();
