@@ -26,138 +26,149 @@ const produtos = [
 
     {
         id: 1,
-        nome: "Água Sanitária 5L",
-        preco: 9.60,
+        nome: "Sabão de Querozene 1L",
+        preco: 18.40,
         estoque: 20,
         categoria: "limpeza",
         categoriaNome: "Limpeza",
-        imagem: "img/agua-sanitaria.jpg",
-        descricao: "Ideal para limpeza e higienização."
+        imagem: "/limpeza/querozene.webp",
+        descricao: "Produto para limpeza pesada e desengordurante."
     },
 
-    {
+       {
         id: 2,
-        nome: "Cloro",
-        preco: 16.00,
+        nome: "Tira Manchas 500ml",
+        preco: 18.40,
         estoque: 20,
         categoria: "limpeza",
         categoriaNome: "Limpeza",
-        imagem: "img/cloro.jpg",
-        descricao: "Produto para limpeza pesada."
+        imagem: "/limpeza/tira-manchas.webp",
+        descricao: "Produto para limpeza pesada e desinfecção."
     },
 
     {
         id: 3,
-        nome: "Cloro 5L",
-        preco: 32.00,
+        nome: "pereirâo 2L",
+        preco: 23.20,
         estoque: 20,
         categoria: "limpeza",
         categoriaNome: "Limpeza",
-        imagem: "img/cloro-5l.jpg",
-        descricao: "Cloro em embalagem de 5 litros."
+        imagem: "/limpeza/pereirao.webp",
+        descricao: "Produto para limpeza pesada e desengordurante."
     },
 
     {
         id: 4,
-        nome: "Limpador Perfumado",
+        nome: "Limpador Perfumado Roxo 2L",
         preco: 17.60,
         estoque: 20,
         categoria: "limpeza",
         categoriaNome: "Limpeza",
-        imagem: "img/limpador-perfumado.jpg",
-        descricao: "Limpeza com perfume agradável."
+        imagem: "/limpeza/limpador-roxo.webp",
+        descricao: "Produto para limpeza geral, perfumado."
     },
 
     {
         id: 5,
-        nome: "Pinho",
-        preco: 14.40,
+        nome: "Ricardão Multiuso 2L",
+        preco: 13.60,
         estoque: 20,
         categoria: "limpeza",
         categoriaNome: "Limpeza",
-        imagem: "img/pinho.jpg",
+        imagem: "/limpeza/ricardão.webp",
         descricao: "Produto para limpeza geral."
     },
 
     {
         id: 6,
-        nome: "Pereirão",
-        preco: 23.20,
+        nome: "Cloro Desinfetante em Gel 2L",
+        preco: 16.00,
         estoque: 20,
         categoria: "limpeza",
         categoriaNome: "Limpeza",
-        imagem: "img/pereirao.jpg",
-        descricao: "Limpador para diversas superfícies."
+        imagem: "/limpeza/cloro.webp",
+        descricao: "Produto para limpeza pesada e desinfecção."
     },
 
     {
         id: 7,
-        nome: "Sabão Querosene",
+        nome: "Luastra moveis 500ml",
         preco: 18.40,
         estoque: 20,
         categoria: "limpeza",
         categoriaNome: "Limpeza",
-        imagem: "img/sabao-querosene.jpg",
-        descricao: "Produto para limpeza pesada."
+        imagem: "/limpeza/moveis.webp",
+        descricao: "Luastra e perfuma móveis."
     },
 
     {
         id: 8,
-        nome: "Detergente Neutro",
-        preco: 12.00,
+        nome: "Pinho Neutro 2L",
+        preco:14.40,
         estoque: 20,
         categoria: "limpeza",
         categoriaNome: "Limpeza",
-        imagem: "img/detergente-neutro.jpg",
-        descricao: "Detergente para uso diário."
+        imagem: "/limpeza/pinho.webp",
+        descricao: "Produto para limpeza geral, perfumado."
     },
 
-
+    {
+        id: 9,
+        nome: "Limpa vidros 1L",
+        preco:14.40,
+        estoque: 20,
+        categoria: "limpeza",
+        categoriaNome: "Limpeza",
+        imagem: "/limpeza/vidro.webp",
+        descricao: "Limpa vidros e superfícies lisas, perfumado."
+    },
+    
     /* =========================
        LAVANDERIA
     ========================== */
 
-    {
-        id: 9,
-        nome: "Sabão Líquido Azul 5L",
-        preco: 25.50,
-        estoque: 20,
-        categoria: "lavanderia",
-        categoriaNome: "Lavanderia",
-        imagem: "img/sabao-liquido-azul.jpg",
-        descricao: "Sabão líquido para roupas."
-    },
-
-    {
+      {
         id: 10,
-        nome: "Sabão Líquido Branco",
-        preco: 14.40,
+        nome: "Sabão líquido cereja 2L",
+        preco:14.40,
         estoque: 20,
         categoria: "lavanderia",
         categoriaNome: "Lavanderia",
-        imagem: "img/sabao-liquido-branco.jpg",
-        descricao: "Para lavagem de roupas."
+        imagem: "/lavanderia/sabao-cereja2l.webp",
+        descricao: "Produto para limpeza geral, perfumado."
     },
 
     {
         id: 11,
-        nome: "Tira Manchas",
-        preco: 16.40,
+        nome: "Sabão líquido azul 2L",
+        preco:14.40,
         estoque: 20,
         categoria: "lavanderia",
         categoriaNome: "Lavanderia",
-        imagem: "img/tira-manchas.jpg",
-        descricao: "Auxilia na remoção de manchas."
+        imagem: "/lavanderia/sabao-azul.webp",
+        descricao: "Produto para limpeza geral, perfumado."
     },
 
-    {
+        {
         id: 12,
-        nome: "Amaciante",
+        nome: "",
+        preco: 16.00,
+        estoque: 20,
+        categoria: "lavanderia",
+        categoriaNome: "Lavanderia",
+        imagem: "/lavanderia/cloro.webp",
+        descricao: "Produto para limpeza pesada e desinfecção."
+    },
+
+
+    {
+        id: 13,
+        nome: "",
         preco: 13.60,
         estoque: 20,
         categoria: "lavanderia",
         categoriaNome: "Lavanderia",
-        imagem: "img/amaciante.jpg",
+        imagem: "/lavanderia/amaciante.jpg",
         descricao: "Deixa as roupas macias e perfumadas."
     },
 
@@ -167,68 +178,68 @@ const produtos = [
     ========================== */
 
     {
-        id: 13,
+        id: 14,
         nome: "Borrifador",
         preco: 4.60,
         estoque: 20,
         categoria: "acessorios",
         categoriaNome: "Acessórios",
-        imagem: "img/borrifador.jpg",
+        imagem: "/acessorios/borrifador.webp",
         descricao: "Borrifador para produtos de limpeza."
     },
 
     {
-        id: 14,
+        id: 15,
         nome: "Vassoura",
         preco: 9.60,
         estoque: 20,
         categoria: "acessorios",
         categoriaNome: "Acessórios",
-        imagem: "img/vassoura.jpg",
+        imagem: "/acessorios/vassoura.webp",
         descricao: "Ideal para limpeza da casa."
     },
 
     {
-        id: 15,
+        id: 16,
         nome: "Rodo",
         preco: 13.60,
         estoque: 20,
         categoria: "acessorios",
         categoriaNome: "Acessórios",
-        imagem: "img/rodo.jpg",
+        imagem: "/acessorios/rodo.webp",
         descricao: "Rodo para pisos e superfícies."
     },
 
     {
-        id: 16,
+        id: 17,
         nome: "Lixeira",
         preco: 10.40,
         estoque: 20,
         categoria: "acessorios",
         categoriaNome: "Acessórios",
-        imagem: "img/lixeira.jpg",
+        imagem: "/acessorios/lixeira.webp",
         descricao: "Lixeira para organização."
     },
 
     {
-        id: 17,
-        nome: "Limpa Alumínio",
+        id: 18,
+        nome: "",
         preco: 7.40,
         estoque: 20,
         categoria: "acessorios",
         categoriaNome: "Acessórios",
-        imagem: "img/limpa-aluminio.jpg",
+        imagem: "/acessorios/limpa-aluminio.webp",
         descricao: "Para limpeza de alumínio."
     },
 
     {
-        id: 18,
+        id: 19,
         nome: "Sabão em Pedra",
         preco: 4.20,
         estoque: 20,
         categoria: "acessorios",
         categoriaNome: "Acessórios",
-        imagem: "img/sabao-pedra.jpg",
+        imagem: "/acessorios/sabao-pedra.webp",
         descricao: "Sabão para limpeza geral."
     },
 
@@ -238,46 +249,35 @@ const produtos = [
     ========================== */
 
     {
-        id: 19,
-        nome: "Cheirinho",
+        id: 20,
+        nome: "Cheirinho Azul",
         preco: 14.40,
         estoque: 20,
         categoria: "perfumacao",
         categoriaNome: "Perfumação",
-        imagem: "img/cheirinho.jpg",
+        imagem: "/perfumacao/cheirinho-azul.webp",
         descricao: "Perfume para ambientes."
     },
 
     {
-        id: 20,
-        nome: "Cheirinho para Cama e Cozinha",
-        preco: 14.40,
+        id: 21,
+        nome: "Cheirinho Cereja",
+        preco: 18.40,
         estoque: 20,
         categoria: "perfumacao",
         categoriaNome: "Perfumação",
-        imagem: "img/cheirinho-cama-cozinha.jpg",
+        imagem: "/perfumacao/cheirinho-cereja500.webp",
         descricao: "Perfume para tecidos e ambientes."
     },
 
     {
-        id: 21,
-        nome: "Produto para Dar Cheiro",
-        preco: 4.25,
+        id: 23,
+        nome: "Cheirinho de coco",
+        preco: 18.40,
         estoque: 20,
         categoria: "perfumacao",
         categoriaNome: "Perfumação",
-        imagem: "img/produto-cheiro.jpg",
-        descricao: "Produto para perfumar ambientes."
-    },
-
-    {
-        id: 22,
-        nome: "Limpa Móveis",
-        preco: 10.40,
-        estoque: 20,
-        categoria: "perfumacao",
-        categoriaNome: "Perfumação",
-        imagem: "img/limpa-moveis.jpg",
+        imagem: "/perfumacao/cheirinho-coco.webp",
         descricao: "Limpeza e cuidado para móveis."
     }
 
@@ -473,15 +473,14 @@ function imagemProduto(produto) {
             src="${produto.imagem}"
             alt="${produto.nome}"
             loading="lazy"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            style="
+                width:100%;
+                height:100%;
+                object-fit:contain;
+                display:block;
+            "
+            onerror="this.style.display='none';"
         >
-
-        <div
-            class="imagem-placeholder"
-            style="display:none;"
-        >
-            🧴
-        </div>
     `;
 
 }
@@ -1580,4 +1579,3 @@ document.addEventListener(
 renderizarCarrosseis();
 
 renderizarCarrinho();
-                   
